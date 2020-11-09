@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/about/index.html</loc>
+    <loc>http://wzw21.cn/2020/11/08/hello-world/</loc>
     
     <lastmod>2020-11-09</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/11/08/hello-world/</loc>
+    <loc>http://wzw21.cn/about/index.html</loc>
     
-    <lastmod>2020-11-08</lastmod>
+    <lastmod>2020-11-09</lastmod>
     
   </url>
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>http://wzw21.cn/</loc>
     <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
