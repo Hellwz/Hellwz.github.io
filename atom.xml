@@ -6,7 +6,7 @@
   <link href="http://wzw21.cn/atom.xml" rel="self"/>
   
   <link href="http://wzw21.cn/"/>
-  <updated>2020-11-09T13:43:58.596Z</updated>
+  <updated>2020-11-10T09:08:01.427Z</updated>
   <id>http://wzw21.cn/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>律学初探</title>
+    <link href="http://wzw21.cn/2020/11/10/lvxue1/"/>
+    <id>http://wzw21.cn/2020/11/10/lvxue1/</id>
+    <published>2020-11-10T08:43:31.000Z</published>
+    <updated>2020-11-10T09:08:01.427Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="概论"><a href="#概论" class="headerlink" title="概论"></a>概论</h1><p>律学是对构成乐制的各音依据声学原理、运用数学方法来研究各音间相互关系的一门学科。其中，“律”是构成律制的基本单位。当各律在高度上作精密规定，形成一种体系时，称为“律制”。“律”和“音”的概念相近但略有不同，律制中每个单位称为“律”，而音阶中每个单位称为“音”，律制与音阶的关系十分密切。</p><p>我们知道，在复合音中，除“基音”外还有各种“倍音”，将各倍音进行横向排列，可以得到倍音列，如表1-1所示。各律制的规定也与倍音列密不可分。</p><center>表1-1 倍音列</center><table><thead><tr><th align="center">基音</th><th align="center">二倍音</th><th align="center">三倍音</th><th align="center">四倍音</th><th align="center">五倍音</th><th align="center">……</th><th align="center">N倍音</th></tr></thead><tbody><tr><td align="center">f</td><td align="center">2f</td><td align="center">3f</td><td align="center">4f</td><td align="center">5f</td><td align="center">……</td><td align="center">N×f</td></tr></tbody></table><p>接下来将对音律计算法，以及五度相生律、纯律和十二平均律三种律制进行详细介绍。</p><h1 id="音律计算法"><a href="#音律计算法" class="headerlink" title="音律计算法"></a>音律计算法</h1><p>等一个word转markdown的好方法</p><h1 id="五度相生律"><a href="#五度相生律" class="headerlink" title="五度相生律"></a>五度相生律</h1><h1 id="纯律"><a href="#纯律" class="headerlink" title="纯律"></a>纯律</h1><h1 id="十二平均律"><a href="#十二平均律" class="headerlink" title="十二平均律"></a>十二平均律</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;概论&quot;&gt;&lt;a href=&quot;#概论&quot; class=&quot;headerlink&quot; title=&quot;概论&quot;&gt;&lt;/a&gt;概论&lt;/h1&gt;&lt;p&gt;律学是对构成乐制的各音依据声学原理、运用数学方法来研究各音间相互关系的一门学科。其中，“律”是构成律制的基本单位。当各律在高度上作精密规定，</summary>
+      
+    
+    
+    
+    <category term="理论知识" scheme="http://wzw21.cn/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="乐理" scheme="http://wzw21.cn/tags/%E4%B9%90%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>技术栈</title>
+    <link href="http://wzw21.cn/2020/11/10/used/"/>
+    <id>http://wzw21.cn/2020/11/10/used/</id>
+    <published>2020-11-10T05:09:09.000Z</published>
+    <updated>2020-11-10T09:11:28.209Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="已掌握或使用过的工具与技术"><a href="#已掌握或使用过的工具与技术" class="headerlink" title="已掌握或使用过的工具与技术"></a>已掌握或使用过的工具与技术</h1><h2 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h2><ul><li>Free Pascal</li><li>Delphi</li><li>Dev C++</li><li>Virtual Studio 2013/2017</li><li>Virtual Studio Code</li><li>Eclipse</li><li>IntelliJ IDEA</li><li>Pycharm</li><li>Android Studio</li><li>Matlab</li><li>Masm</li></ul><h2 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h2><ul><li>Pascal</li><li>C/C++</li><li>Python</li><li>Java</li><li>SQL</li></ul><h2 id="机器学习相关"><a href="#机器学习相关" class="headerlink" title="机器学习相关"></a>机器学习相关</h2><ul><li>TensorFlow</li><li>Keras</li><li>Opencv</li><li>Scikit-Learn</li><li>ModelArts</li><li>Kaldi</li><li>DeepSpeech</li></ul><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><ul><li>SQL Server 2000</li><li>MySQL</li><li>Navicat</li></ul><h2 id="C-Java-框架"><a href="#C-Java-框架" class="headerlink" title="C++/Java 框架"></a>C++/Java 框架</h2><ul><li>MFC</li><li>Win32 API</li><li>Spring Boot</li><li>MyBatis</li></ul><h2 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h2><ul><li>Raspberry Pi</li><li>Serial Comm</li><li>ESP 8266</li><li>MPU 6050</li><li>8253/8255/8259</li></ul><h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><ul><li>Vue.js</li><li>Bootstrap</li><li>Hexo</li></ul><h2 id="其它工具"><a href="#其它工具" class="headerlink" title="其它工具"></a>其它工具</h2><h3 id="音乐制作"><a href="#音乐制作" class="headerlink" title="音乐制作"></a>音乐制作</h3><ul><li>Cubase</li><li>Overture</li><li>Sonic Pi</li></ul><h3 id="游戏制作"><a href="#游戏制作" class="headerlink" title="游戏制作"></a>游戏制作</h3><ul><li>Cocos</li><li>Unity</li></ul><h3 id="图像处理"><a href="#图像处理" class="headerlink" title="图像处理"></a>图像处理</h3><ul><li>Photoshop</li></ul><h3 id="网页制作"><a href="#网页制作" class="headerlink" title="网页制作"></a>网页制作</h3><ul><li>DreamWeaver</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;已掌握或使用过的工具与技术&quot;&gt;&lt;a href=&quot;#已掌握或使用过的工具与技术&quot; class=&quot;headerlink&quot; title=&quot;已掌握或使用过的工具与技术&quot;&gt;&lt;/a&gt;已掌握或使用过的工具与技术&lt;/h1&gt;&lt;h2 id=&quot;IDE&quot;&gt;&lt;a href=&quot;#IDE&quot; c</summary>
+      
+    
+    
+    
+    <category term="总结" scheme="http://wzw21.cn/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="总结" scheme="http://wzw21.cn/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
