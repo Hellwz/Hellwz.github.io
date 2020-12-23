@@ -46,7 +46,7 @@
     <link href="http://wzw21.cn/2020/11/10/used/"/>
     <id>http://wzw21.cn/2020/11/10/used/</id>
     <published>2020-11-10T05:09:09.000Z</published>
-    <updated>2020-11-10T09:11:28.209Z</updated>
+    <updated>2020-12-23T08:25:49.366Z</updated>
     
     <content type="html"><![CDATA[<h1 id="已掌握或使用过的工具与技术"><a class="markdownIt-Anchor" href="#已掌握或使用过的工具与技术"></a> 已掌握或使用过的工具与技术</h1><h2 id="ide"><a class="markdownIt-Anchor" href="#ide"></a> IDE</h2><ul><li>Free Pascal</li><li>Delphi</li><li>Dev C++</li><li>Virtual Studio 2013/2017</li><li>Virtual Studio Code</li><li>Eclipse</li><li>IntelliJ IDEA</li><li>Pycharm</li><li>Android Studio</li><li>Matlab</li><li>Masm</li></ul><h2 id="语言"><a class="markdownIt-Anchor" href="#语言"></a> 语言</h2><ul><li>Pascal</li><li>C/C++</li><li>Python</li><li>Java</li><li>SQL</li></ul><h2 id="机器学习相关"><a class="markdownIt-Anchor" href="#机器学习相关"></a> 机器学习相关</h2><ul><li>TensorFlow</li><li>Keras</li><li>Opencv</li><li>Scikit-Learn</li><li>ModelArts</li><li>Kaldi</li><li>DeepSpeech</li></ul><h2 id="数据库"><a class="markdownIt-Anchor" href="#数据库"></a> 数据库</h2><ul><li>SQL Server 2000</li><li>MySQL</li><li>Navicat</li></ul><h2 id="cjava-框架"><a class="markdownIt-Anchor" href="#cjava-框架"></a> C++/Java 框架</h2><ul><li>MFC</li><li>Win32 API</li><li>Spring Boot</li><li>MyBatis</li></ul><h2 id="硬件"><a class="markdownIt-Anchor" href="#硬件"></a> 硬件</h2><ul><li>Raspberry Pi</li><li>Serial Comm</li><li>ESP 8266</li><li>MPU 6050</li><li>8253/8255/8259</li></ul><h2 id="前端"><a class="markdownIt-Anchor" href="#前端"></a> 前端</h2><ul><li>Vue.js</li><li>Bootstrap</li><li>Hexo</li></ul><h2 id="其它工具"><a class="markdownIt-Anchor" href="#其它工具"></a> 其它工具</h2><h3 id="音乐制作"><a class="markdownIt-Anchor" href="#音乐制作"></a> 音乐制作</h3><ul><li>Cubase</li><li>Overture</li><li>Sonic Pi</li></ul><h3 id="游戏制作"><a class="markdownIt-Anchor" href="#游戏制作"></a> 游戏制作</h3><ul><li>Cocos</li><li>Unity</li></ul><h3 id="图像处理"><a class="markdownIt-Anchor" href="#图像处理"></a> 图像处理</h3><ul><li>Photoshop</li></ul><h3 id="网页制作"><a class="markdownIt-Anchor" href="#网页制作"></a> 网页制作</h3><ul><li>DreamWeaver</li></ul>]]></content>
     
@@ -59,7 +59,7 @@
     
     
     
-    <category term="总结" scheme="http://wzw21.cn/categories/%E6%80%BB%E7%BB%93/"/>
+    <category term="经验与总结" scheme="http://wzw21.cn/categories/%E7%BB%8F%E9%AA%8C%E4%B8%8E%E6%80%BB%E7%BB%93/"/>
     
     
     <category term="总结" scheme="http://wzw21.cn/tags/%E6%80%BB%E7%BB%93/"/>
