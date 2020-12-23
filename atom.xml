@@ -6,7 +6,7 @@
   <link href="http://wzw21.cn/atom.xml" rel="self"/>
   
   <link href="http://wzw21.cn/"/>
-  <updated>2020-12-23T13:59:03.229Z</updated>
+  <updated>2020-12-23T14:01:36.255Z</updated>
   <id>http://wzw21.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://wzw21.cn/2020/12/23/tips4python/"/>
     <id>http://wzw21.cn/2020/12/23/tips4python/</id>
     <published>2020-12-23T07:54:26.000Z</published>
-    <updated>2020-12-23T13:59:03.229Z</updated>
+    <updated>2020-12-23T14:01:36.255Z</updated>
     
     <content type="html"><![CDATA[<h2 id="强烈推荐python组合技-miniconda-jupyter-vscode"><a class="markdownIt-Anchor" href="#强烈推荐python组合技-miniconda-jupyter-vscode"></a> 强烈推荐Python组合技 : MiniConda + Jupyter + Vscode</h2><h2 id="管理python环境"><a class="markdownIt-Anchor" href="#管理python环境"></a> 管理Python环境</h2><p>使用miniconda管理python环境，方便不同python版本的管理与切换，同时方便对python库进行管理与使用。例如你可以创建一个python版本为3.7的环境来进行tensorflow的使用，创建一个python版本为3.8的环境来进行pytorch的使用，两个环境独立，互不影响。</p><h2 id="实时运行代码"><a class="markdownIt-Anchor" href="#实时运行代码"></a> 实时运行代码</h2><p>使用Jupyter Notebook来进行程序编写，可以实时运行代码。每完成几行代码后，同时按下enter与shift，可直接运行这几行代码并得到结果，并且结果会保存在内存中，可继续编写程序。</p><h2 id="合适的ide"><a class="markdownIt-Anchor" href="#合适的ide"></a> 合适的IDE</h2><p>使用全能的Vscode搭配miniconda与jupyter进行python程序的编写，比起在网页上使用jupyter notebook更加舒适。在Vscode的右上角可更改所使用的python环境。</p><p>具体的安装方式与环境配置方式待补充。</p>]]></content>
     
