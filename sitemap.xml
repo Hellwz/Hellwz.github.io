@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wzw21.cn/2021/04/13/algorithms/</loc>
+    
+    <lastmod>2021-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wzw21.cn/2020/12/23/asr/</loc>
+    
+    <lastmod>2021-10-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wzw21.cn/2021/10/17/git-use/</loc>
     
     <lastmod>2021-10-17</lastmod>
@@ -19,20 +33,6 @@
     <loc>http://wzw21.cn/2021/07/26/algorithms2/</loc>
     
     <lastmod>2021-07-26</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wzw21.cn/2021/04/13/algorithms/</loc>
-    
-    <lastmod>2021-07-26</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wzw21.cn/2020/12/23/asr/</loc>
-    
-    <lastmod>2020-12-23</lastmod>
     
   </url>
   
@@ -146,13 +146,6 @@
 
   
   <url>
-    <loc>http://wzw21.cn/categories/%E6%93%8D%E4%BD%9C%E5%AE%9E%E8%B7%B5/</loc>
-    <lastmod>2021-10-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://wzw21.cn/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2021-10-17</lastmod>
     <changefreq>daily</changefreq>
@@ -175,6 +168,13 @@
   
   <url>
     <loc>http://wzw21.cn/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/</loc>
+    <lastmod>2021-10-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://wzw21.cn/categories/%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2021-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
