@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wzw21.cn/2021/10/17/git-use/</loc>
+    
+    <lastmod>2021-10-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wzw21.cn/2021/07/26/algorithms2/</loc>
     
     <lastmod>2021-10-17</lastmod>
@@ -17,13 +24,6 @@
   
   <url>
     <loc>http://wzw21.cn/about/index.html</loc>
-    
-    <lastmod>2021-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wzw21.cn/2021/10/17/git-use/</loc>
     
     <lastmod>2021-10-17</lastmod>
     
