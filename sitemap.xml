@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wzw21.cn/2020/12/23/asr/</loc>
+    
+    <lastmod>2021-10-27</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wzw21.cn/2021/10/17/git-use/</loc>
     
-    <lastmod>2021-10-21</lastmod>
+    <lastmod>2021-10-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wzw21.cn/2021/10/27/play-audio-in-python/</loc>
+    
+    <lastmod>2021-10-27</lastmod>
     
   </url>
   
@@ -24,13 +38,6 @@
   
   <url>
     <loc>http://wzw21.cn/about/index.html</loc>
-    
-    <lastmod>2021-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wzw21.cn/2020/12/23/asr/</loc>
     
     <lastmod>2021-10-17</lastmod>
     
@@ -143,6 +150,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>http://wzw21.cn/tags/MIR/</loc>
+    <lastmod>2021-10-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -167,14 +181,7 @@
   </url>
   
   <url>
-    <loc>http://wzw21.cn/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/</loc>
-    <lastmod>2021-10-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://wzw21.cn/categories/%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95/</loc>
+    <loc>http://wzw21.cn/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4%E4%B8%8E%E5%AE%9E%E8%B7%B5/</loc>
     <lastmod>2021-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
