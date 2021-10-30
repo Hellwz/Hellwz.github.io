@@ -6,7 +6,7 @@
   <link href="http://wzw21.cn/atom.xml" rel="self"/>
   
   <link href="http://wzw21.cn/"/>
-  <updated>2021-10-27T15:42:06.514Z</updated>
+  <updated>2021-10-30T07:09:46.463Z</updated>
   <id>http://wzw21.cn/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>非侵入式教务系统辅助选课方法</title>
+    <link href="http://wzw21.cn/2021/10/30/get-courses/"/>
+    <id>http://wzw21.cn/2021/10/30/get-courses/</id>
+    <published>2021-10-30T06:59:30.000Z</published>
+    <updated>2021-10-30T07:09:46.463Z</updated>
+    
+    <content type="html"><![CDATA[<p>注意：该方法仅可用于替代手动刷新页面并选择课程，不影响选课的公平性</p><ol><li>下载安装“按键精灵”</li><li>运行软件后，在新建脚本中选择新建空白脚本</li><li>进入脚本后选择上方“普通”旁边的“源文件”，并粘贴入如下内容。</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">d &#x3D; 30000</span><br><span class="line">MoveTo 1285,376</span><br><span class="line">LeftClick 1</span><br><span class="line">Delay 1000</span><br><span class="line">MoveTo 293,538</span><br><span class="line">LeftClick 1</span><br><span class="line">Delay 1000</span><br><span class="line">MoveTo 1756, 246</span><br><span class="line">LeftClick 1</span><br><span class="line">Delay d</span><br></pre></td></tr></table></figure><p>（注意三处MoveTo后的坐标分别为“查询”按钮、查询结果中第一项课程前的勾选框，“提交”按钮的坐标位置，不同电脑按钮坐标可能不同，可用软件里的“抓抓”功能获取各个按钮的坐标并进行修改）</p><ol start="4"><li>完成脚本后保存退出</li><li>按电脑键盘上相应热键可启动或停止脚本，热键可设置</li><li>使用时需先进入“自由选课”，并在搜索框中输入想选课程的全称，然后启动脚本</li><li>使用脚本时不能使用电脑做其他事</li><li>时间设置为30s抢一次，可更改</li><li>可按顺序加入更多勾选框坐标，以实现同一时间抢多门具有相同特征的课程（例如网课）</li></ol><p>— 2019年12月</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;注意：该方法仅可用于替代手动刷新页面并选择课程，不影响选课的公平性&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载安装“按键精灵”&lt;/li&gt;
+&lt;li&gt;运行软件后，在新建脚本中选择新建空白脚本&lt;/li&gt;
+&lt;li&gt;进入脚本后选择上方“普通”旁边的“源文件”，并粘贴入如下内容。&lt;/li&gt;
+&lt;/o</summary>
+      
+    
+    
+    
+    <category term="操作步骤与实践" scheme="http://wzw21.cn/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4%E4%B8%8E%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+    <category term="自动" scheme="http://wzw21.cn/tags/%E8%87%AA%E5%8A%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Python读取和播放音频文件</title>
