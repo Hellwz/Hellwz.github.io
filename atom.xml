@@ -6,7 +6,7 @@
   <link href="http://wzw21.cn/atom.xml" rel="self"/>
   
   <link href="http://wzw21.cn/"/>
-  <updated>2022-01-08T08:10:54.387Z</updated>
+  <updated>2022-01-08T08:18:14.717Z</updated>
   <id>http://wzw21.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>群体智能优化算法</title>
+    <link href="http://wzw21.cn/2022/01/08/sioa/"/>
+    <id>http://wzw21.cn/2022/01/08/sioa/</id>
+    <published>2022-01-08T08:14:34.000Z</published>
+    <updated>2022-01-08T08:18:14.717Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="群体智能优化算法"><a class="markdownIt-Anchor" href="#群体智能优化算法"></a> 群体智能优化算法</h1><h2 id="研究背景"><a class="markdownIt-Anchor" href="#研究背景"></a> 研究背景</h2><p>群体智能优化算法（Swarm Intelligence Optimization Algorithm）是计算智能中的一种常用算法，其基本理论是模拟自然界中鱼群、鸟群、蜂群、狼群和细菌群等动物群体的行为，利用群体间的信息交流与合作，通过简单有限的个体间互动来达到优化的目的。</p><p>群体智能（Swarm Intelligence, SI）由Gerardo Beni和Jing Wang于1989年首次提出，是研究由大量简单个体构成的群体系统的学科。与个体的智能相比，这些群体系统往往并没有复杂精细的内部设计，但基于简单的个体与规则，它们具有更强的鲁棒性、稳定性和适应性。群体智能方法处理的最典型问题就是优化问题。优化问题的基础性能够较为直观地体现群体方法的理论特性，辅助其理论研究，同时也具有重要的应用价值，进一步推动了群体智能算法的发展。与传统的优化算法相比，基于仿生学的群体智能优化算法本质上是一种概率并行搜索算法。其寻优速度更快，能更有效地搜索复杂优化问题的全局最优解。</p><p>常见的群体智能优化算法有蚁群算法（Ant Colony Optimization，ACO）、粒子群优化算法（Particle Swarm Optimization，PSO）、烟花算法（Fireworks Algorithm，FWA）、萤火虫算法(Firefly Algorithm，FA)、布谷鸟算法(Cuckoo Search，CS)、头脑风暴算法(Brain Storm Optimization，BSO)、水波算法(Water Wave Optimization，WWO)、灰狼优化算法(Grey Wolf Optimizer，GWO)、鲸鱼优化算法(Whale Optimization Algorithm，WOA)、蛙跳算法(Shuffled Frog Leaping Algorithm，SFLA)等。应用包括寻找函数最优值、求解旅行商问题、武器目标分配问题、多处理机调度问题、有依赖的优化问题和作业调度问题等。</p><h2 id="相关工作"><a class="markdownIt-Anchor" href="#相关工作"></a> 相关工作</h2><p>元启发式优化算法可以分为三大类：进化算法、基于物理的算法和群体智能算法。进化算法受到自然界中生物进化概念的启发，最常见的是遗传算法，由Holland于1992年提出；基于物理的算法通常模仿物理规则实现优化，例如引力搜索算法、大爆炸算法。群体智能优化算法的机制与基于物理规则的算法相似，不同的是其搜索单元使用模拟的生物集体智能和社会智能进行导航。群体智能优化算法主要包括两个阶段，分别称为勘探和开发，勘探是指尽可能广泛地调查搜索空间中有希望的区域的过程，需要随机算子对搜索空间进行随机和全局的搜索。开发则是指在勘探阶段所获得的区域周围进行局部搜索。如何平衡这两个阶段以找到全局最优是各种优化算法需要解决的问题。</p><p>群体智能优化算法中的常见算法之一是粒子群优化算法，由Kennedy和Eberhart于1995年提出，其灵感来自于鸟群的社会行为。该算法使用多个粒子来追踪最佳粒子的位置以及目前为止已获得的自身最佳位置。蚁群算法由Dorigo等人于2006年提出，灵感来自于蚁群中蚂蚁的社会行为。该算法模仿蚁群在寻找巢穴与食物源之间最短路径时使用的信息素机制。人工蜂群算法受到蜂群行为启发，在2005年由Karaboga等人为优化代数问题而提出。其中侦察蜂负责勘探，雇佣蜂和观察蜂负责开发。烟花算法于 2010年由谭营等人提出，受启发于烟花爆炸的现象，是一种受自然现象而非生物启发的经典群体智能算法。烟花算法种包括爆炸算子、变异算子、映射规则和选择算子。萤火虫算法受启发于萤火虫的闪烁行为，由Xin-She Yang于 2009年提出。该算法假设每只萤火虫都向着看上去比自己更亮的萤火虫飞行，萤火虫的吸引力与它们的亮度成正比。布谷鸟算法由Xin-She Yang等人于 2009年提出，受启发于布谷鸟的巢寄生育雏行为和列维飞行机制。头脑风暴算法受到人类会议过程中的“头脑风暴”过程的启发，由史玉回于2011年提出，算法利用聚类思想搜索局部最优，然后通过对比得到全局最优。水波算法由 Yu-Jun Zheng于 2015年提出，受启发于水波的几种现象：传播、反射与消散。灰狼优化算法和鲸鱼优化算法由Seyedali Mirjalili等人分别于2014年和2016年提出，这两种算法在<a href="https://wzw21.cn/2022/01/07/gwo/">GWO</a>和<a href="https://wzw21.cn/2022/01/08/woa/">WOA</a>中重点介绍。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;群体智能优化算法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#群体智能优化算法&quot;&gt;&lt;/a&gt; 群体智能优化算法&lt;/h1&gt;
+&lt;h2 id=&quot;研究背景&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#研究背景&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="理论知识" scheme="http://wzw21.cn/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="智能算法" scheme="http://wzw21.cn/tags/%E6%99%BA%E8%83%BD%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>群体智能优化算法之鲸鱼优化算法</title>
