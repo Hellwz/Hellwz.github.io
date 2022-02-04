@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WiZardWen - Blog</title><meta name="author" content="Zhaowen Wang"><meta name="copyright" content="Zhaowen Wang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta property="og:type" content="website">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WiZardWen - Blog</title><meta name="author" content="Zhaowen Wang"><meta name="copyright" content="Zhaowen Wang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="WiZardWen">
 <meta property="og:url" content="http://wzw21.cn/page/2/index.html">
 <meta property="og:site_name" content="WiZardWen">
@@ -6,13 +6,13 @@
 <meta property="og:image" content="https://i.loli.net/2020/11/10/lIxwN8uY5SOpQXc.jpg">
 <meta property="article:author" content="Zhaowen Wang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2020/11/10/lIxwN8uY5SOpQXc.jpg"><link rel="shortcut icon" href="/img/logo.jpg"><link rel="canonical" href="http://wzw21.cn/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://i.loli.net/2020/11/10/lIxwN8uY5SOpQXc.jpg"><link rel="shortcut icon" href="/img/logo.jpg"><link rel="canonical" href="http://wzw21.cn/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: undefined,
   translate: undefined,
   noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -31,50 +31,29 @@
     month: '个月前'
   },
   copyright: undefined,
-  ClickShowText: undefined,
   lightbox: 'fancybox',
   Snackbar: undefined,
-  justifiedGallery: {
-    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
   },
   isPhotoFigcaption: false,
   islazyload: true,
   isanchor: false
-};
-
-var saveToLocal = {
-  set: function setWithExpiry(key, value, ttl) {
-    const now = new Date()
-    const expiryDay = ttl * 86400000
-    const item = {
-      value: value,
-      expiry: now.getTime() + expiryDay,
-    }
-    localStorage.setItem(key, JSON.stringify(item))
-  },
-
-  get: function getWithExpiry(key) {
-    const itemStr = localStorage.getItem(key)
-
-    if (!itemStr) {
-      return undefined
-    }
-    const item = JSON.parse(itemStr)
-    const now = new Date()
-
-    if (now.getTime() > item.expiry) {
-      localStorage.removeItem(key)
-      return undefined
-    }
-    return item.value
-  }
-}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'WiZardWen',
   isPost: false,
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2022-02-04 18:27:10'
+  postUpdate: '2022-02-04 21:17:50'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -87,60 +66,84 @@ var saveToLocal = {
   #post-meta time {
     display: inline !important
   }
-</style></noscript><script>(function () {  window.activateDarkMode = function () {
-    document.documentElement.setAttribute('data-theme', 'dark')
-    if (document.querySelector('meta[name="theme-color"]') !== null) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-    }
-  }
-  window.activateLightMode = function () {
-    document.documentElement.setAttribute('data-theme', 'light')
-   if (document.querySelector('meta[name="theme-color"]') !== null) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-    }
-  }
-  const autoChangeMode = 'false'
-  const t = saveToLocal.get('theme')
-  if (autoChangeMode === '1') {
-    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
-    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
-    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
-    if (t === undefined) {
-      if (isLightMode) activateLightMode()
-      else if (isDarkMode) activateDarkMode()
-      else if (isNotSpecified || hasNoSupport) {
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
         const now = new Date()
-        const hour = now.getHours()
-        const isNight = hour <= 6 || hour >= 18
-        isNight ? activateDarkMode() : activateLightMode()
-      }
-      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-        if (saveToLocal.get('theme') === undefined) {
-          e.matches ? activateDarkMode() : activateLightMode()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
         }
-      })
-    } else if (t === 'light') activateLightMode()
-    else activateDarkMode()
-  } else if (autoChangeMode === '2') {
-    const now = new Date()
-    const hour = now.getHours()
-    const isNight = hour <= 6 || hour >= 18
-    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
-    else if (t === 'light') activateLightMode()
-    else activateDarkMode()
-  } else {
-    if (t === 'dark') activateDarkMode()
-    else if (t === 'light') activateLightMode()
-  }const asideStatus = saveToLocal.get('aside-status')
-if (asideStatus !== undefined) {
-   if (asideStatus === 'hide') {
-     document.documentElement.classList.add('hide-aside')
-   } else {
-     document.documentElement.classList.remove('hide-aside')
-   }
-}})()</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="WiZardWen" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="https://i.loli.net/2020/11/10/lIxwN8uY5SOpQXc.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-sticky-note"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 小工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/gugugu/"><i class="fa-fw fas fa-fire"></i><span> 咕咕语翻译</span></a></li><li><a class="site-page" href="/Chord-Query-Web/"><i class="fa-fw fas fa-music"></i><span> 和弦查询</span></a></li><li><a class="site-page" href="/travel_map/"><i class="fa-fw fas fa-map-marked-alt"></i><span> 旅游地图</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://i.loli.net/2020/11/10/dlsrOwSNvnAHGjK.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">WiZardWen</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-sticky-note"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 小工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/gugugu/"><i class="fa-fw fas fa-fire"></i><span> 咕咕语翻译</span></a></li><li><a class="site-page" href="/Chord-Query-Web/"><i class="fa-fw fas fa-music"></i><span> 和弦查询</span></a></li><li><a class="site-page" href="/travel_map/"><i class="fa-fw fas fa-map-marked-alt"></i><span> 旅游地图</span></a></li></ul></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">WiZardWen</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/13/algorithms/" title="算法竞赛部分算法（一）算法简介">     <img class="post_bg" data-lazy-src="https://h2.ioliu.cn/bing/Aoraki_ZH-CN7776353328_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="算法竞赛部分算法（一）算法简介"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/13/algorithms/" title="算法竞赛部分算法（一）算法简介">算法竞赛部分算法（一）算法简介</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-04-13T05:44:40.000Z" title="发表于 2021-04-13 13:44:40">2021-04-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E7%BB%8F%E9%AA%8C%E4%B8%8E%E6%80%BB%E7%BB%93/">经验与总结</a></span></div><div class="content">本文写于2015年暑假，当年文笔稚嫩，且内容并不全面，仅供参考。总结内容包括搜索、图论、动态规划、数据结构与数论等。
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="WiZardWen" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://i.loli.net/2020/11/10/lIxwN8uY5SOpQXc.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-sticky-note"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 小工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%92%95%E5%92%95%E8%AF%AD%E7%BF%BB%E8%AF%91"><i class="fa-fw /gugugu/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E5%92%8C%E5%BC%A6%E6%9F%A5%E8%AF%A2"><i class="fa-fw /Chord-Query-Web/"></i><span> 1</span></a></li><li><a class="site-page child" href="/%E6%97%85%E6%B8%B8%E5%9C%B0%E5%9B%BE"><i class="fa-fw /travel_map/"></i><span> 2</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://i.loli.net/2020/11/10/dlsrOwSNvnAHGjK.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">WiZardWen</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-sticky-note"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 小工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%92%95%E5%92%95%E8%AF%AD%E7%BF%BB%E8%AF%91"><i class="fa-fw /gugugu/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E5%92%8C%E5%BC%A6%E6%9F%A5%E8%AF%A2"><i class="fa-fw /Chord-Query-Web/"></i><span> 1</span></a></li><li><a class="site-page child" href="/%E6%97%85%E6%B8%B8%E5%9C%B0%E5%9B%BE"><i class="fa-fw /travel_map/"></i><span> 2</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">WiZardWen</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/13/algorithms/" title="算法竞赛部分算法（一）算法简介">     <img class="post_bg" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/Aoraki_ZH-CN7776353328_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="算法竞赛部分算法（一）算法简介"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/13/algorithms/" title="算法竞赛部分算法（一）算法简介">算法竞赛部分算法（一）算法简介</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-04-13T05:44:40.000Z" title="发表于 2021-04-13 13:44:40">2021-04-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BB%8F%E9%AA%8C%E4%B8%8E%E6%80%BB%E7%BB%93/">经验与总结</a></span></div><div class="content">本文写于2015年暑假，当年文笔稚嫩，且内容并不全面，仅供参考。总结内容包括搜索、图论、动态规划、数据结构与数论等。
  搜索
  DFS
 深度优先搜索（Depth-first Search，DFS），基于递归的搜索方式，它的特点是由一个状态拓展一个状态，然后不停拓展，直到找到目标或者无法继续拓展结束一个状态的递归。可以在数列中进行搜索，也可在坐标系中进行搜索。
@@ -153,7 +156,7 @@ BFS：对于解决最短或最少问题特别有效，而且寻找深度小，�
 由于时间和空间的局限性，搜索一般只能解决数据量小的问题。所以我们需要用不同的方法剪枝。剪枝方法包括：
 
 记忆化搜索（与DP类似）；
-从方法上剪枝，如采用分枝定 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/12/23/asr/" title="ASR (自动语音识别）初探">     <img class="post_bg" data-lazy-src="https://i.loli.net/2020/12/23/LgTYOhZkDa9XjfJ.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ASR (自动语音识别）初探"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/23/asr/" title="ASR (自动语音识别）初探">ASR (自动语音识别）初探</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-23T14:43:35.000Z" title="发表于 2020-12-23 22:43:35">2020-12-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4%E4%B8%8E%E5%AE%9E%E8%B7%B5/">操作步骤与实践</a></span></div><div class="content"> ASR实验及记录
+从方法上剪枝，如采用分枝定 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/12/23/asr/" title="ASR (自动语音识别）初探">     <img class="post_bg" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://i.loli.net/2020/12/23/LgTYOhZkDa9XjfJ.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ASR (自动语音识别）初探"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/23/asr/" title="ASR (自动语音识别）初探">ASR (自动语音识别）初探</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-23T14:43:35.000Z" title="发表于 2020-12-23 22:43:35">2020-12-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4%E4%B8%8E%E5%AE%9E%E8%B7%B5/">操作步骤与实践</a></span></div><div class="content"> ASR实验及记录
  DeepSpeech2
 DeepSpeech2是一个采用PaddlePaddle平台的端到端自动语音识别引擎的开源项目，具体原理参考论文Baidu’s Deep Speech 2 paper。
  环境配置
@@ -170,7 +173,7 @@ DeepSpeech2是一个采用PaddlePaddle平台的端到端自动语音识别引擎
 自行准备manifest文件，其中包括每条音频的存储路径，音频时长与数据标签（文本）。文本中不能含有标点符号、英文字母与阿拉伯数字。格式为：{“audio_filepath”: “”, “duration”: , “text”: “”}
 
 
-使 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/12/23/tips4python/" title="Python使用建议">     <img class="post_bg" data-lazy-src="https://i.loli.net/2020/12/23/MeBk58ElsCx9GKP.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python使用建议"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/23/tips4python/" title="Python使用建议">Python使用建议</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-23T07:54:26.000Z" title="发表于 2020-12-23 15:54:26">2020-12-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E7%BB%8F%E9%AA%8C%E4%B8%8E%E6%80%BB%E7%BB%93/">经验与总结</a></span></div><div class="content"> 强烈推荐Python组合技 : MiniConda + Jupyter + Vscode
+使 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/12/23/tips4python/" title="Python使用建议">     <img class="post_bg" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://i.loli.net/2020/12/23/MeBk58ElsCx9GKP.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python使用建议"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/23/tips4python/" title="Python使用建议">Python使用建议</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-23T07:54:26.000Z" title="发表于 2020-12-23 15:54:26">2020-12-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BB%8F%E9%AA%8C%E4%B8%8E%E6%80%BB%E7%BB%93/">经验与总结</a></span></div><div class="content"> 强烈推荐Python组合技 : MiniConda + Jupyter + Vscode
  管理Python环境
 使用miniconda管理python环境，方便不同python版本的管理与切换，同时方便对python库进行管理与使用。例如你可以创建一个python版本为3.7的环境来进行tensorflow的使用，创建一个python版本为3.8的环境来进行pytorch的使用，两个环境独立，互不影响。
  实时运行代码
@@ -178,7 +181,7 @@ DeepSpeech2是一个采用PaddlePaddle平台的端到端自动语音识别引擎
  合适的IDE
 使用全能的Vscode搭配miniconda与jupyter进行python程序的编写，比起在网页上使用jupyter notebook更加舒适。在Vscode的右上角可更改所使用的python环境。
 具体的安装方式与环境配置方式待补充。
-</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/11/10/lvxue1/" title="律学初探">     <img class="post_bg" data-lazy-src="https://i.loli.net/2020/11/10/KLRmPskzJ12til5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="律学初探"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/10/lvxue1/" title="律学初探">律学初探</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-10T08:43:31.000Z" title="发表于 2020-11-10 16:43:31">2020-11-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/">理论知识</a></span></div><div class="content"> 概论
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/11/10/lvxue1/" title="律学初探">     <img class="post_bg" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://i.loli.net/2020/11/10/KLRmPskzJ12til5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="律学初探"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/10/lvxue1/" title="律学初探">律学初探</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-10T08:43:31.000Z" title="发表于 2020-11-10 16:43:31">2020-11-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/">理论知识</a></span></div><div class="content"> 概论
 律学（temperament）是对构成乐制的各音依据声学原理、运用数学方法来研究各音间相互关系的一门学科。其中，“律”是构成律制的基本单位。当各律在高度上作精密规定，形成一种体系时，称为“律制”（tuning system）。“律”和“音”的概念相近但略有不同，律制中每个单位称为“律”，而音阶中每个单位称为“音”，律制与音阶的关系十分密切。
 我们知道，在复合音中，除“基音”（fundamental tone）外还有各种“泛音”（overtone），有时也称为倍音。以弦振动为例，全弦振动产生基音，同时各部分振动产生各种泛音（弦分两段振动产生第一泛音，分三段振动产生第二泛音，以此类推）。将基音和各泛音进行横向排列，可以得到“谐音列”，如表1-1所示。各律制的规定与谐音列密不可分。
 表1-1 谐音列
@@ -215,11 +218,15 @@ N×f
 
 
 
-接下来将分别对音律计算法，三种常见律制（五度相生律、纯律和十二平均律），中欧律学简 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/11/08/hello-world/" title="Hello World">     <img class="post_bg" data-lazy-src="https://i.loli.net/2020/11/10/rJfSKZLgP9pAv5G.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/08/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-08T05:04:25.660Z" title="发表于 2020-11-08 13:04:25">2020-11-08</time></span></div><div class="content"> Welcome to Hell
-</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="https://i.loli.net/2020/11/10/lIxwN8uY5SOpQXc.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Zhaowen Wang</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/hellwz"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">Markdown里的空格真的很严格</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/02/04/tempo-baseline/" title="音乐速度与节拍估计基本方法"><img data-lazy-src="http://h2.ioliu.cn/bing/WinterOlymics_ZH-CN7384614076_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="音乐速度与节拍估计基本方法"/></a><div class="content"><a class="title" href="/2022/02/04/tempo-baseline/" title="音乐速度与节拍估计基本方法">音乐速度与节拍估计基本方法</a><time datetime="2022-02-04T08:58:28.000Z" title="发表于 2022-02-04 16:58:28">2022-02-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/11/play-midi-note/" title="使用Python播放MIDI音符"><img data-lazy-src="https://h2.ioliu.cn/bing/ChurchillBears_ZH-CN1430090934_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用Python播放MIDI音符"/></a><div class="content"><a class="title" href="/2022/01/11/play-midi-note/" title="使用Python播放MIDI音符">使用Python播放MIDI音符</a><time datetime="2022-01-11T12:56:38.000Z" title="发表于 2022-01-11 20:56:38">2022-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/08/sioa/" title="群体智能优化算法"><img data-lazy-src="https://h2.ioliu.cn/bing/LakeKochelsee_ZH-CN0004970986_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="群体智能优化算法"/></a><div class="content"><a class="title" href="/2022/01/08/sioa/" title="群体智能优化算法">群体智能优化算法</a><time datetime="2022-01-08T08:14:34.000Z" title="发表于 2022-01-08 16:14:34">2022-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/08/woa/" title="群体智能优化算法之鲸鱼优化算法"><img data-lazy-src="https://h2.ioliu.cn/bing/FrederickSound_ZH-CN1838908749_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="群体智能优化算法之鲸鱼优化算法"/></a><div class="content"><a class="title" href="/2022/01/08/woa/" title="群体智能优化算法之鲸鱼优化算法">群体智能优化算法之鲸鱼优化算法</a><time datetime="2022-01-08T07:00:20.000Z" title="发表于 2022-01-08 15:00:20">2022-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/07/gwo/" title="群体智能优化算法之灰狼优化算法"><img data-lazy-src="https://h2.ioliu.cn/bing/GrayWolf_ZH-CN9733727662_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="群体智能优化算法之灰狼优化算法"/></a><div class="content"><a class="title" href="/2022/01/07/gwo/" title="群体智能优化算法之灰狼优化算法">群体智能优化算法之灰狼优化算法</a><time datetime="2022-01-07T08:19:46.000Z" title="发表于 2022-01-07 16:19:46">2022-01-07</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4%E4%B8%8E%E5%AE%9E%E8%B7%B5/"><span class="card-category-list-name">操作步骤与实践</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"><span class="card-category-list-name">理论知识</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BB%8F%E9%AA%8C%E4%B8%8E%E6%80%BB%E7%BB%93/"><span class="card-category-list-name">经验与总结</span><span class="card-category-list-count">4</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BB%8F%E9%AA%8C%E4%B8%8E%E6%80%BB%E7%BB%93/%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">算法</span><span class="card-category-list-count">1</span></a></li></ul>
+接下来将分别对音律计算法，三种常见律制（五度相生律、纯律和十二平均律），中欧律学简 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/11/08/hello-world/" title="Hello World">     <img class="post_bg" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://i.loli.net/2020/11/10/rJfSKZLgP9pAv5G.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/08/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-08T05:04:25.660Z" title="发表于 2020-11-08 13:04:25">2020-11-08</time></span></div><div class="content"> Welcome to Hell
+</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://i.loli.net/2020/11/10/lIxwN8uY5SOpQXc.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Zhaowen Wang</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/hellwz"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">Markdown里的空格真的很严格</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/02/04/tempo-baseline/" title="音乐速度与节拍估计基本方法"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="http://h2.ioliu.cn/bing/WinterOlymics_ZH-CN7384614076_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="音乐速度与节拍估计基本方法"/></a><div class="content"><a class="title" href="/2022/02/04/tempo-baseline/" title="音乐速度与节拍估计基本方法">音乐速度与节拍估计基本方法</a><time datetime="2022-02-04T08:58:28.000Z" title="发表于 2022-02-04 16:58:28">2022-02-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/11/play-midi-note/" title="使用Python播放MIDI音符"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/ChurchillBears_ZH-CN1430090934_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用Python播放MIDI音符"/></a><div class="content"><a class="title" href="/2022/01/11/play-midi-note/" title="使用Python播放MIDI音符">使用Python播放MIDI音符</a><time datetime="2022-01-11T12:56:38.000Z" title="发表于 2022-01-11 20:56:38">2022-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/08/sioa/" title="群体智能优化算法"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/LakeKochelsee_ZH-CN0004970986_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="群体智能优化算法"/></a><div class="content"><a class="title" href="/2022/01/08/sioa/" title="群体智能优化算法">群体智能优化算法</a><time datetime="2022-01-08T08:14:34.000Z" title="发表于 2022-01-08 16:14:34">2022-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/08/woa/" title="群体智能优化算法之鲸鱼优化算法"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/FrederickSound_ZH-CN1838908749_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="群体智能优化算法之鲸鱼优化算法"/></a><div class="content"><a class="title" href="/2022/01/08/woa/" title="群体智能优化算法之鲸鱼优化算法">群体智能优化算法之鲸鱼优化算法</a><time datetime="2022-01-08T07:00:20.000Z" title="发表于 2022-01-08 15:00:20">2022-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/07/gwo/" title="群体智能优化算法之灰狼优化算法"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/GrayWolf_ZH-CN9733727662_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="群体智能优化算法之灰狼优化算法"/></a><div class="content"><a class="title" href="/2022/01/07/gwo/" title="群体智能优化算法之灰狼优化算法">群体智能优化算法之灰狼优化算法</a><time datetime="2022-01-07T08:19:46.000Z" title="发表于 2022-01-07 16:19:46">2022-01-07</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
             
-            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/ASR/" style="font-size: 1.1em; color: #999">ASR</a> <a href="/tags/Github/" style="font-size: 1.1em; color: #999">Github</a> <a href="/tags/Librosa/" style="font-size: 1.1em; color: #999">Librosa</a> <a href="/tags/MIR/" style="font-size: 1.3em; color: #99a1ac">MIR</a> <a href="/tags/Python/" style="font-size: 1.5em; color: #99a9bf">Python</a> <a href="/tags/%E4%B9%90%E7%90%86/" style="font-size: 1.1em; color: #999">乐理</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 1.5em; color: #99a9bf">总结</a> <a href="/tags/%E6%99%BA%E8%83%BD%E7%AE%97%E6%B3%95/" style="font-size: 1.3em; color: #99a1ac">智能算法</a> <a href="/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" style="font-size: 1.1em; color: #999">算法模板</a> <a href="/tags/%E8%87%AA%E5%8A%A8/" style="font-size: 1.1em; color: #999">自动</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/02/"><span class="card-archive-list-date">二月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">一月 2022</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">3</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">15</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">14.7k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-02-04T10:27:10.349Z"></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://i.loli.net/2020/11/10/dlsrOwSNvnAHGjK.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Zhaowen Wang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>function subtitleType () {
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4%E4%B8%8E%E5%AE%9E%E8%B7%B5/"><span class="card-category-list-name">操作步骤与实践</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"><span class="card-category-list-name">理论知识</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BB%8F%E9%AA%8C%E4%B8%8E%E6%80%BB%E7%BB%93/"><span class="card-category-list-name">经验与总结</span><span class="card-category-list-count">4</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BB%8F%E9%AA%8C%E4%B8%8E%E6%80%BB%E7%BB%93/%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">算法</span><span class="card-category-list-count">1</span></a></li></ul></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/ASR/" style="font-size: 1.1em; color: #999">ASR</a> <a href="/tags/Github/" style="font-size: 1.1em; color: #999">Github</a> <a href="/tags/Librosa/" style="font-size: 1.1em; color: #999">Librosa</a> <a href="/tags/MIR/" style="font-size: 1.3em; color: #99a1ac">MIR</a> <a href="/tags/Python/" style="font-size: 1.5em; color: #99a9bf">Python</a> <a href="/tags/%E4%B9%90%E7%90%86/" style="font-size: 1.1em; color: #999">乐理</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 1.5em; color: #99a9bf">总结</a> <a href="/tags/%E6%99%BA%E8%83%BD%E7%AE%97%E6%B3%95/" style="font-size: 1.3em; color: #99a1ac">智能算法</a> <a href="/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" style="font-size: 1.1em; color: #999">算法模板</a> <a href="/tags/%E8%87%AA%E5%8A%A8/" style="font-size: 1.1em; color: #999">自动</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/02/"><span class="card-archive-list-date">二月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">一月 2022</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">15</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">14.7k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-02-04T13:17:50.460Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://i.loli.net/2020/11/10/dlsrOwSNvnAHGjK.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Zhaowen Wang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>function subtitleType () {
   if (true) { 
     var typed = new Typed("#subtitle", {
       strings: "你好...旅行者...我这里...可不便宜,每分钟...在评论区...收取...一句夸奖,May the odds be ever in your favor,Just have a little faith".split(","),
@@ -234,8 +241,11 @@ N×f
 }
 
 if (true) {
-  if (typeof Typed === 'function') subtitleType()
-  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
 } else {
   subtitleType()
-}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
