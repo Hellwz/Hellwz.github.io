@@ -246,9 +246,9 @@ c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></spa
   document.querySelectorAll('#article-container span.katex-display').forEach(item => {
     btf.wrap(item, 'div', { class: 'katex-wrap'})
   })
-})()</script><style><div id="taboola-livere">{display: none;}</div></style><script>function loadLivere () {
+})()</script><script>function loadLivere () {
   if (typeof LivereTower === 'object') {
-    window.LivereTower.init()
+    window.LivereTower.init();
   }
   else {
     (function(d, s) {
@@ -270,4 +270,17 @@ else {
   function loadOtherComment () {
     loadLivere()
   }
+}
+</script><script>var intervalFunctionID = setInterval(function(){ myTimer() }, 100);
+function myTimer() {
+    if (document.getElementById("taboola-livere") != null)
+    {
+      if (document.getElementById("taboola-livere").style.display == "none")
+      {
+        //alert("Interval function stopped");
+        clearInterval(intervalFunctionID);
+      }
+    }
+    document.getElementById("taboola-livere").style.display="none";
+    //alert("Interval function running");
 }</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
