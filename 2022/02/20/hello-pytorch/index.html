@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PyTorch入门程序 | WiZardWen</title><meta name="keywords" content="Pytorch"><meta name="author" content="David Wang"><meta name="copyright" content="David Wang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="在 PyTorch For Audio and Music Processing 入门代码的基础上添加了一些注释和新的内容 12345import torchfrom torch import nnfrom torch.utils.data import DataLoaderfrom torchvision import datasetsfrom torchvision.transforms im">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PyTorch入门程序">
+<meta property="og:url" content="http://wzw21.cn/2022/02/20/hello-pytorch/index.html">
+<meta property="og:site_name" content="WiZardWen">
+<meta property="og:description" content="在 PyTorch For Audio and Music Processing 入门代码的基础上添加了一些注释和新的内容 12345import torchfrom torch import nnfrom torch.utils.data import DataLoaderfrom torchvision import datasetsfrom torchvision.transforms im">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://h2.ioliu.cn/bing/Latern2022_ZH-CN0112710917_1920x1080.jpg?imageslim">
+<meta property="article:published_time" content="2022-02-20T12:42:42.000Z">
+<meta property="article:modified_time" content="2022-02-20T12:49:19.771Z">
+<meta property="article:author" content="David Wang">
+<meta property="article:tag" content="Pytorch">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://h2.ioliu.cn/bing/Latern2022_ZH-CN0112710917_1920x1080.jpg?imageslim"><link rel="shortcut icon" href="/img/logo.jpg"><link rel="canonical" href="http://wzw21.cn/2022/02/20/hello-pytorch/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3d36217e4c86175346eaf84030cca07c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NLQ2MXGB0Q"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NLQ2MXGB0Q');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'PyTorch入门程序',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-02-20 20:49:19'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="WiZardWen" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://i.loli.net/2020/11/10/lIxwN8uY5SOpQXc.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-sticky-note"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 小工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gugugu/"><i class="fa-fw fas fa-fire"></i><span> 咕咕语翻译</span></a></li><li><a class="site-page child" href="/Chord-Query-Web/"><i class="fa-fw fas fa-music"></i><span> 和弦查询</span></a></li><li><a class="site-page child" href="/travel_map/"><i class="fa-fw fas fa-map-marked-alt"></i><span> 旅游地图</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://h2.ioliu.cn/bing/Latern2022_ZH-CN0112710917_1920x1080.jpg?imageslim')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">WiZardWen</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-sticky-note"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 小工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gugugu/"><i class="fa-fw fas fa-fire"></i><span> 咕咕语翻译</span></a></li><li><a class="site-page child" href="/Chord-Query-Web/"><i class="fa-fw fas fa-music"></i><span> 和弦查询</span></a></li><li><a class="site-page child" href="/travel_map/"><i class="fa-fw fas fa-map-marked-alt"></i><span> 旅游地图</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">PyTorch入门程序</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-02-20T12:42:42.000Z" title="发表于 2022-02-20 20:42:42">2022-02-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-20T12:49:19.771Z" title="更新于 2022-02-20 20:49:19">2022-02-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4%E4%B8%8E%E5%AE%9E%E8%B7%B5/">操作步骤与实践</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">868</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="PyTorch入门程序"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>在 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=4p0G6tgNLis">PyTorch For Audio and Music Processing</a> 入门代码的基础上添加了一些注释和新的内容</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torch <span class="keyword">import</span> nn</span><br><span class="line"><span class="keyword">from</span> torch.utils.data <span class="keyword">import</span> DataLoader</span><br><span class="line"><span class="keyword">from</span> torchvision <span class="keyword">import</span> datasets</span><br><span class="line"><span class="keyword">from</span> torchvision.transforms <span class="keyword">import</span> ToTensor</span><br></pre></td></tr></table></figure>
+<ol>
+<li>download dataset</li>
+<li>create data loader</li>
+<li>build model</li>
+<li>train</li>
+<li>save trained model</li>
+<li>load model</li>
+<li>predict</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">download_mnist_datasets</span>():</span></span><br><span class="line">  train_data = datasets.MNIST(</span><br><span class="line">      root=<span class="string">&quot;data&quot;</span>,</span><br><span class="line">      download=<span class="literal">True</span>,</span><br><span class="line">      train=<span class="literal">True</span>,</span><br><span class="line">      transform=ToTensor() </span><br><span class="line">  )</span><br><span class="line">  val_data = datasets.MNIST(</span><br><span class="line">      root=<span class="string">&quot;data&quot;</span>,</span><br><span class="line">      download=<span class="literal">True</span>,</span><br><span class="line">      train=<span class="literal">False</span>,</span><br><span class="line">      transform=ToTensor() </span><br><span class="line">  )</span><br><span class="line">  <span class="keyword">return</span> train_data, val_data</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SimpleNet</span>(<span class="params">nn.Module</span>):</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span> <span class="comment"># constructor</span></span><br><span class="line">    <span class="built_in">super</span>().__init__()</span><br><span class="line">    self.flatten = nn.Flatten()</span><br><span class="line">    self.dense_layers = nn.Sequential(</span><br><span class="line">        nn.Linear(<span class="number">28</span>*<span class="number">28</span>, <span class="number">256</span>), <span class="comment"># Fully Connected layer (input_shape, output_shape)</span></span><br><span class="line">        nn.ReLU(),</span><br><span class="line">        nn.Linear(<span class="number">256</span>, <span class="number">10</span>)</span><br><span class="line">    )</span><br><span class="line">    self.softmax = nn.Softmax(dim=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">forward</span>(<span class="params">self, input_data</span>):</span></span><br><span class="line">    flattened_data = self.flatten(input_data)</span><br><span class="line">    logits = self.dense_layers(flattened_data) <span class="comment"># logits here means the input of the final softmax</span></span><br><span class="line">    predictions = self.softmax(logits)</span><br><span class="line">    <span class="keyword">return</span> predictions</span><br></pre></td></tr></table></figure>
+<p>Need more code than Tensorflow 2.x or Keras!</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">train_one_epoch</span>(<span class="params">model, data_loader, loss_fn, optimizer, device</span>):</span></span><br><span class="line">  model.train() <span class="comment"># change to train mode</span></span><br><span class="line">  loss_sum = <span class="number">0.</span></span><br><span class="line">  correct = <span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span> inputs, targets <span class="keyword">in</span> data_loader:</span><br><span class="line">    inputs, targets = inputs.to(device), targets.to(device)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># calculate loss</span></span><br><span class="line">    predictions = model(inputs) <span class="comment"># this will call forward function automatically</span></span><br><span class="line">    loss = loss_fn(predictions, targets)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># backpropagate loss and update weights</span></span><br><span class="line">    optimizer.zero_grad() <span class="comment"># reset grads</span></span><br><span class="line">    loss.backward() <span class="comment"># calculate grads</span></span><br><span class="line">    optimizer.step() <span class="comment"># update weights</span></span><br><span class="line"></span><br><span class="line">    loss_sum += loss.item() <span class="comment"># item() returns the value of this tensor as a standard Python number</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">with</span> torch.no_grad():</span><br><span class="line">      _, predictions_indexes = torch.<span class="built_in">max</span>(predictions, <span class="number">1</span>) <span class="comment"># get predicted indexes</span></span><br><span class="line">      correct += torch.<span class="built_in">sum</span>(predictions_indexes == targets)</span><br><span class="line">      <span class="comment"># or correct += (predictions.argmax(1) == targets).type(torch.float).sum().item()</span></span><br><span class="line"></span><br><span class="line">  print(<span class="string">f&quot;Train loss: <span class="subst">&#123;(loss_sum / <span class="built_in">len</span>(data_loader)):<span class="number">.4</span>f&#125;</span>, train accuracy: <span class="subst">&#123;(correct / <span class="built_in">len</span>(data_loader.dataset)):<span class="number">.4</span>f&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">val_one_epoch</span>(<span class="params">model, data_loader, loss_fn, device</span>):</span></span><br><span class="line">  model.<span class="built_in">eval</span>() <span class="comment"># change to eval mode</span></span><br><span class="line">  loss_sum = <span class="number">0.</span></span><br><span class="line">  correct = <span class="number">0</span></span><br><span class="line">  <span class="keyword">with</span> torch.no_grad():</span><br><span class="line">    <span class="keyword">for</span> inputs, targets <span class="keyword">in</span> data_loader:</span><br><span class="line">      inputs, targets = inputs.to(device), targets.to(device)</span><br><span class="line"></span><br><span class="line">      predictions = model(inputs)</span><br><span class="line">      loss = loss_fn(predictions, targets)</span><br><span class="line"></span><br><span class="line">      loss_sum += loss.item()</span><br><span class="line">      _, predictions_indexes = torch.<span class="built_in">max</span>(predictions, <span class="number">1</span>)</span><br><span class="line">      correct += torch.<span class="built_in">sum</span>(predictions_indexes == targets)</span><br><span class="line"></span><br><span class="line">  print(<span class="string">f&quot;Validation loss: <span class="subst">&#123;(loss_sum / <span class="built_in">len</span>(data_loader)):<span class="number">.4</span>f&#125;</span>, validation accuracy: <span class="subst">&#123;(correct / <span class="built_in">len</span>(data_loader.dataset)):<span class="number">.4</span>f&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">train</span>(<span class="params">model, train_data_loader, val_data_loader, loss_fn, optimizer, device, epochs</span>):</span></span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(epochs):</span><br><span class="line">    print(<span class="string">f&quot;Epoch <span class="subst">&#123;i+<span class="number">1</span>&#125;</span>&quot;</span>)</span><br><span class="line">    train_one_epoch(model, train_data_loader, loss_fn, optimizer, device)</span><br><span class="line">    val_one_epoch(model, val_data_loader, loss_fn, device)</span><br><span class="line">    print(<span class="string">&quot;-----------------------&quot;</span>)</span><br><span class="line">  print(<span class="string">&quot;Training is done&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">predict</span>(<span class="params">model, <span class="built_in">input</span>, target, class_mapping</span>):</span></span><br><span class="line">  <span class="comment"># input&#x27;s shape = torch.Size([1, 28, 28])</span></span><br><span class="line">  model.<span class="built_in">eval</span>() <span class="comment"># change to eval mode</span></span><br><span class="line">  <span class="keyword">with</span> torch.no_grad(): <span class="comment"># don&#x27;t have to calculate grads here</span></span><br><span class="line">    predictions = model(<span class="built_in">input</span>)</span><br><span class="line">    <span class="comment"># predictions&#x27; shape = torch.Size([1, 10])</span></span><br><span class="line">    predicted_index = predictions[<span class="number">0</span>].argmax(<span class="number">0</span>)</span><br><span class="line">    predicted = class_mapping[predicted_index]</span><br><span class="line">    expected = class_mapping[target]</span><br><span class="line">  <span class="keyword">return</span> predicted, expected</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> torch.cuda.is_available():</span><br><span class="line">  device = <span class="string">&quot;cuda&quot;</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  device = <span class="string">&quot;cpu&quot;</span></span><br><span class="line">print(<span class="string">f&quot;Using <span class="subst">&#123;device&#125;</span> device&quot;</span>)</span><br><span class="line"></span><br><span class="line">BATCH_SIZE = <span class="number">32</span></span><br><span class="line">EPOCHS = <span class="number">10</span></span><br><span class="line">LEARNING_RATE = <span class="number">.001</span></span><br><span class="line"></span><br><span class="line">class_mapping = [</span><br><span class="line">  <span class="string">&quot;0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;1&quot;</span>,</span><br><span class="line">  <span class="string">&quot;2&quot;</span>,</span><br><span class="line">  <span class="string">&quot;3&quot;</span>,</span><br><span class="line">  <span class="string">&quot;4&quot;</span>,</span><br><span class="line">  <span class="string">&quot;5&quot;</span>,</span><br><span class="line">  <span class="string">&quot;6&quot;</span>,</span><br><span class="line">  <span class="string">&quot;7&quot;</span>,</span><br><span class="line">  <span class="string">&quot;8&quot;</span>,</span><br><span class="line">  <span class="string">&quot;9&quot;</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<pre><code>Using cuda device
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># download MNIST dataset</span></span><br><span class="line">train_data, val_data = download_mnist_datasets()</span><br><span class="line">print(<span class="string">&quot;Dataset downloaded&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># create a data loader for the train set</span></span><br><span class="line">train_data_loader = DataLoader(train_data, batch_size=BATCH_SIZE)</span><br><span class="line">val_data_loader = DataLoader(val_data, batch_size=BATCH_SIZE)</span><br></pre></td></tr></table></figure>
+<pre><code>Dataset downloaded
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># build model</span></span><br><span class="line">simple_net = SimpleNet().to(device)</span><br><span class="line"></span><br><span class="line">loss_fn = nn.CrossEntropyLoss()</span><br><span class="line">optimizer = torch.optim.Adam(simple_net.parameters(), lr=LEARNING_RATE)</span><br><span class="line"></span><br><span class="line"><span class="comment"># train model</span></span><br><span class="line">train(simple_net, train_data_loader, val_data_loader, loss_fn, optimizer, device, EPOCHS)</span><br><span class="line"></span><br><span class="line"><span class="comment"># save model</span></span><br><span class="line">torch.save(simple_net.state_dict(), <span class="string">&quot;simple_net.pth&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;Model saved&quot;</span>)</span><br><span class="line"><span class="comment"># torch.save(model.state_dict(), &quot;my_model.pth&quot;)  # only save parameters</span></span><br><span class="line"><span class="comment"># torch.save(model, &quot;my_model.pth&quot;)  # save the whole model</span></span><br><span class="line"><span class="comment"># checkpoint = &#123;&quot;net&quot;: model.state_dict(), &quot;optimizer&quot;: optimizer.state_dict(), &quot;epoch&quot;: epoch&#125;</span></span><br></pre></td></tr></table></figure>
+<pre><code>Epoch 1
+Train loss: 1.5717, train accuracy: 0.9036
+Validation loss: 1.5280, validation accuracy: 0.9388
+-----------------------
+Epoch 2
+Train loss: 1.5148, train accuracy: 0.9506
+Validation loss: 1.5153, validation accuracy: 0.9507
+-----------------------
+Epoch 3
+Train loss: 1.5008, train accuracy: 0.9629
+Validation loss: 1.5016, validation accuracy: 0.9625
+-----------------------
+Epoch 4
+Train loss: 1.4924, train accuracy: 0.9707
+Validation loss: 1.4958, validation accuracy: 0.9680
+-----------------------
+Epoch 5
+Train loss: 1.4871, train accuracy: 0.9760
+Validation loss: 1.4919, validation accuracy: 0.9702
+-----------------------
+Epoch 6
+Train loss: 1.4837, train accuracy: 0.9789
+Validation loss: 1.4884, validation accuracy: 0.9742
+-----------------------
+Epoch 7
+Train loss: 1.4811, train accuracy: 0.9814
+Validation loss: 1.4885, validation accuracy: 0.9736
+-----------------------
+Epoch 8
+Train loss: 1.4787, train accuracy: 0.9837
+Validation loss: 1.4896, validation accuracy: 0.9724
+-----------------------
+Epoch 9
+Train loss: 1.4771, train accuracy: 0.9851
+Validation loss: 1.4884, validation accuracy: 0.9739
+-----------------------
+Epoch 10
+Train loss: 1.4758, train accuracy: 0.9863
+Validation loss: 1.4889, validation accuracy: 0.9732
+-----------------------
+Training is done
+Model saved
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># load model</span></span><br><span class="line">reloaded_simple_net = SimpleNet()</span><br><span class="line">state_dict = torch.load(<span class="string">&quot;simple_net.pth&quot;</span>)</span><br><span class="line">reloaded_simple_net.load_state_dict(state_dict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># make an inference</span></span><br><span class="line"><span class="built_in">input</span>, target = val_data[<span class="number">0</span>][<span class="number">0</span>], val_data[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">predicted, expected = predict(reloaded_simple_net, <span class="built_in">input</span>, target, class_mapping)</span><br><span class="line">print(<span class="string">f&quot;Predicted: &#x27;<span class="subst">&#123;predicted&#125;</span>&#x27;, expected: &#x27;<span class="subst">&#123;expected&#125;</span>&#x27;&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Predicted: '7', expected: '7'
+</code></pre>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">David Wang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://wzw21.cn/2022/02/20/hello-pytorch/">http://wzw21.cn/2022/02/20/hello-pytorch/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://wzw21.cn" target="_blank">WiZardWen</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Pytorch/">Pytorch</a></div><div class="post_share"><div class="social-share" data-image="https://h2.ioliu.cn/bing/Latern2022_ZH-CN0112710917_1920x1080.jpg?imageslim" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/02/14/tempo-tutorial-notes/"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/MaldivesHeart_ZH-CN0032539727_1920x1080.jpg?imageslim" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">音乐速度与节拍估计（二）教程阅读笔记</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81MTk0Ny8yODQyOA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://i.loli.net/2020/11/10/lIxwN8uY5SOpQXc.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">David Wang</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/hellwz"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">Markdown里的空格真的很严格</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/02/20/hello-pytorch/" title="PyTorch入门程序"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/Latern2022_ZH-CN0112710917_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PyTorch入门程序"/></a><div class="content"><a class="title" href="/2022/02/20/hello-pytorch/" title="PyTorch入门程序">PyTorch入门程序</a><time datetime="2022-02-20T12:42:42.000Z" title="发表于 2022-02-20 20:42:42">2022-02-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/14/tempo-tutorial-notes/" title="音乐速度与节拍估计（二）教程阅读笔记"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/MaldivesHeart_ZH-CN0032539727_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="音乐速度与节拍估计（二）教程阅读笔记"/></a><div class="content"><a class="title" href="/2022/02/14/tempo-tutorial-notes/" title="音乐速度与节拍估计（二）教程阅读笔记">音乐速度与节拍估计（二）教程阅读笔记</a><time datetime="2022-02-14T15:44:03.000Z" title="发表于 2022-02-14 23:44:03">2022-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/06/rm-ad/" title="去除来必力（Livere）附带广告"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/GrahamAdelie_ZH-CN2945763969_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="去除来必力（Livere）附带广告"/></a><div class="content"><a class="title" href="/2022/02/06/rm-ad/" title="去除来必力（Livere）附带广告">去除来必力（Livere）附带广告</a><time datetime="2022-02-06T05:33:46.000Z" title="发表于 2022-02-06 13:33:46">2022-02-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/04/tempo-baseline/" title="音乐速度与节拍估计（一）基本方法"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="http://h2.ioliu.cn/bing/WinterOlymics_ZH-CN7384614076_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="音乐速度与节拍估计（一）基本方法"/></a><div class="content"><a class="title" href="/2022/02/04/tempo-baseline/" title="音乐速度与节拍估计（一）基本方法">音乐速度与节拍估计（一）基本方法</a><time datetime="2022-02-04T08:58:28.000Z" title="发表于 2022-02-04 16:58:28">2022-02-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/11/play-midi-note/" title="使用Python播放MIDI音符"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/ChurchillBears_ZH-CN1430090934_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用Python播放MIDI音符"/></a><div class="content"><a class="title" href="/2022/01/11/play-midi-note/" title="使用Python播放MIDI音符">使用Python播放MIDI音符</a><time datetime="2022-01-11T12:56:38.000Z" title="发表于 2022-01-11 20:56:38">2022-01-11</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://h2.ioliu.cn/bing/Latern2022_ZH-CN0112710917_1920x1080.jpg?imageslim')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By David Wang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init();
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}
+</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

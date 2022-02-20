@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wzw21.cn/2022/02/20/hello-pytorch/</loc>
+    
+    <lastmod>2022-02-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wzw21.cn/2022/02/14/tempo-tutorial-notes/</loc>
     
     <lastmod>2022-02-15</lastmod>
@@ -158,7 +165,7 @@
 
   <url>
     <loc>http://wzw21.cn/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -166,77 +173,84 @@
   
   <url>
     <loc>http://wzw21.cn/tags/%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://wzw21.cn/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://wzw21.cn/tags/ASR/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://wzw21.cn/tags/Github/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://wzw21.cn/tags/%E8%87%AA%E5%8A%A8/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://wzw21.cn/tags/%E6%99%BA%E8%83%BD%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://wzw21.cn/tags/%E4%B9%90%E7%90%86/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://wzw21.cn/tags/MIR/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://wzw21.cn/tags/Python/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://wzw21.cn/tags/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://wzw21.cn/tags/Librosa/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://wzw21.cn/tags/Pytorch/</loc>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -245,35 +259,35 @@
   
   <url>
     <loc>http://wzw21.cn/categories/%E7%BB%8F%E9%AA%8C%E4%B8%8E%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://wzw21.cn/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4%E4%B8%8E%E5%AE%9E%E8%B7%B5/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://wzw21.cn/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://wzw21.cn/categories/%E7%BB%8F%E9%AA%8C%E4%B8%8E%E6%80%BB%E7%BB%93/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://wzw21.cn/categories/%E7%BD%91%E9%A1%B5%E4%B8%8E%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
