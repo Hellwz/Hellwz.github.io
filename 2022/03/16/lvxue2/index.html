@@ -1,0 +1,466 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>律学初探（二） | WiZardWen</title><meta name="keywords" content="乐理"><meta name="author" content="David Wang"><meta name="copyright" content="David Wang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本文修改后出版于《音频音乐与计算机的交融——音频音乐技术2》，谢绝转载。 音律计算法及三种常见律制介绍见 律学初探（一）  六、中国律学简史 中国的律学研究，仅从十二律名的出现算起，至今已有2500多年，可谓历史悠久。我们可以根据中国律学发展的特点，将中国律学史分为四个时期： 1）三分损益律发现时期，约公元前8世纪至公元前3世纪，即春秋战国时期； 2）探求新律时期，约公元前3世纪至公元14世纪，即">
+<meta property="og:type" content="article">
+<meta property="og:title" content="律学初探（二）">
+<meta property="og:url" content="http://wzw21.cn/2022/03/16/lvxue2/index.html">
+<meta property="og:site_name" content="WiZardWen">
+<meta property="og:description" content="本文修改后出版于《音频音乐与计算机的交融——音频音乐技术2》，谢绝转载。 音律计算法及三种常见律制介绍见 律学初探（一）  六、中国律学简史 中国的律学研究，仅从十二律名的出现算起，至今已有2500多年，可谓历史悠久。我们可以根据中国律学发展的特点，将中国律学史分为四个时期： 1）三分损益律发现时期，约公元前8世纪至公元前3世纪，即春秋战国时期； 2）探求新律时期，约公元前3世纪至公元14世纪，即">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://h2.ioliu.cn/bing/PandaDay_ZH-CN6584061291_1920x1080.jpg?imageslim">
+<meta property="article:published_time" content="2022-03-16T02:37:59.000Z">
+<meta property="article:modified_time" content="2022-03-16T02:59:24.654Z">
+<meta property="article:author" content="David Wang">
+<meta property="article:tag" content="乐理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://h2.ioliu.cn/bing/PandaDay_ZH-CN6584061291_1920x1080.jpg?imageslim"><link rel="shortcut icon" href="/img/logo.jpg"><link rel="canonical" href="http://wzw21.cn/2022/03/16/lvxue2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3d36217e4c86175346eaf84030cca07c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NLQ2MXGB0Q"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NLQ2MXGB0Q');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '律学初探（二）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-16 10:59:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="WiZardWen" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://i.loli.net/2020/11/10/lIxwN8uY5SOpQXc.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-sticky-note"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 小工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gugugu/"><i class="fa-fw fas fa-fire"></i><span> 咕咕语翻译</span></a></li><li><a class="site-page child" href="/Chord-Query-Web/"><i class="fa-fw fas fa-music"></i><span> 和弦查询</span></a></li><li><a class="site-page child" href="/travel_map/"><i class="fa-fw fas fa-map-marked-alt"></i><span> 旅游地图</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://h2.ioliu.cn/bing/PandaDay_ZH-CN6584061291_1920x1080.jpg?imageslim')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">WiZardWen</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-sticky-note"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 小工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gugugu/"><i class="fa-fw fas fa-fire"></i><span> 咕咕语翻译</span></a></li><li><a class="site-page child" href="/Chord-Query-Web/"><i class="fa-fw fas fa-music"></i><span> 和弦查询</span></a></li><li><a class="site-page child" href="/travel_map/"><i class="fa-fw fas fa-map-marked-alt"></i><span> 旅游地图</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">律学初探（二）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-16T02:37:59.000Z" title="发表于 2022-03-16 10:37:59">2022-03-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-16T02:59:24.654Z" title="更新于 2022-03-16 10:59:24">2022-03-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/">理论知识</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">6.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>19分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="律学初探（二）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>本文修改后出版于《音频音乐与计算机的交融——音频音乐技术2》，谢绝转载。</p>
+<p>音律计算法及三种常见律制介绍见 <a href="https://wzw21.cn/2020/11/10/lvxue1/">律学初探（一）</a></p>
+<h1 id="六-中国律学简史"><a class="markdownIt-Anchor" href="#六-中国律学简史"></a> 六、中国律学简史</h1>
+<p>中国的律学研究，仅从十二律名的出现算起，至今已有2500多年，可谓历史悠久。我们可以根据中国律学发展的特点，将中国律学史分为四个时期：</p>
+<p>1）三分损益律发现时期，约公元前8世纪至公元前3世纪，即春秋战国时期；</p>
+<p>2）探求新律时期，约公元前3世纪至公元14世纪，即汉代至元代；</p>
+<p>3）十二平均律发现时期，公元16世纪前后，即明代；</p>
+<p>3）律学研究新时期，1911年至今。</p>
+<h2 id="一三分损益律发现时期"><a class="markdownIt-Anchor" href="#一三分损益律发现时期"></a> （一）三分损益律发现时期</h2>
+<p>在讨论律学发展史之前，我们需要明确一些中国古代音乐相关知识。</p>
+<p>中国自西周时期起，音乐就已经有了一定的发展。西周宫廷中有着由1400多人组成的音乐机构，乐器据《诗经》记载也已经达到29种之多。春秋战国时期更是“百花齐放，百家争鸣”，对音律的研究发展提供了条件。</p>
+<p>中国古代有五声音阶、七声音阶，以“宫、商、角、徵、羽”作为音阶中各音的“阶名”。以“变”表示低半音，以“清”表示高半音，例如“变徵”表示比“徵”低半音，“清角”表示比“角”高半音。“宫商角徵羽”的名称早期记载于《管子·地员篇》和《周礼·春官》中，其具体产生时间已无法确定。</p>
+<p>中国古代又有“十二律”，以“黄钟”、“大吕”等作为十二律的名称。高八度的律则加上“清”字表示，例如“清黄钟”。十二律的名称最早记载于《国语·周语》中，于公元前522年周代乐官州鸠答周景王问律时提及。</p>
+<p>表6-1为十二律，五声、七声音阶与现代音名的一种对应关系，列出以方便读者理解后文。十二律中的“黄钟”在不同时期音高不同，周朝时其音高接近十二平均律中的f2。</p>
+<center>表6-1</center>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">十二律律名</th>
+<th style="text-align:left">黄钟</th>
+<th style="text-align:left">大吕</th>
+<th style="text-align:left">太簇</th>
+<th style="text-align:left">夹钟</th>
+<th style="text-align:left">姑洗</th>
+<th style="text-align:left">仲吕</th>
+<th style="text-align:left">蕤宾</th>
+<th style="text-align:left">林钟</th>
+<th style="text-align:left">夷则</th>
+<th style="text-align:left">南吕</th>
+<th style="text-align:left">无射</th>
+<th style="text-align:left">应钟</th>
+<th style="text-align:left">清黄钟</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">对应现在音名</td>
+<td style="text-align:left">f2</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow></mrow><mtext> </mtext><mi mathvariant="normal">#</mi></msubsup><mi>f</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">{_\ ^\# }f2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0961079999999999em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-2.4530000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mspace mtight"><span class="mtight"> </span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">#</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord">2</span></span></span></span></td>
+<td style="text-align:left">g2</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow></mrow><mtext> </mtext><mi mathvariant="normal">#</mi></msubsup><mi>g</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">{_\ ^\# }g2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0961079999999999em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-2.4530000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mspace mtight"><span class="mtight"> </span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">#</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord">2</span></span></span></span></td>
+<td style="text-align:left">a2</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow></mrow><mtext> </mtext><mi mathvariant="normal">#</mi></msubsup><mi>a</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">{_\ ^\# }a2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0961079999999999em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-2.4530000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mspace mtight"><span class="mtight"> </span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">#</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span><span class="mord mathdefault">a</span><span class="mord">2</span></span></span></span></td>
+<td style="text-align:left">b2</td>
+<td style="text-align:left">c3</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow></mrow><mtext> </mtext><mi mathvariant="normal">#</mi></msubsup><mi>c</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">{_\ ^\# }c3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0961079999999999em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-2.4530000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mspace mtight"><span class="mtight"> </span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">#</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span><span class="mord mathdefault">c</span><span class="mord">3</span></span></span></span></td>
+<td style="text-align:left">d3</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow></mrow><mtext> </mtext><mi mathvariant="normal">#</mi></msubsup><mi>d</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">{_\ ^\# }d3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0961079999999999em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-2.4530000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mspace mtight"><span class="mtight"> </span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">#</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span><span class="mord mathdefault">d</span><span class="mord">3</span></span></span></span></td>
+<td style="text-align:left">e3</td>
+<td style="text-align:left">f3</td>
+</tr>
+<tr>
+<td style="text-align:left">五声音阶</td>
+<td style="text-align:left">宫</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">商</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">角</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">徵</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">羽</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">宫</td>
+</tr>
+<tr>
+<td style="text-align:left">七声音阶</td>
+<td style="text-align:left">宫</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">商</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">角</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">变徵</td>
+<td style="text-align:left">徵</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">羽</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">变宫</td>
+<td style="text-align:left">宫</td>
+</tr>
+</tbody>
+</table>
+<p>表6-1中以宫为调首，构成的调式称为五声宫调式或七声宫调式。也可以其它音作为调首，例如徵调式（徵羽宫商角）。表中以黄钟作为宫音来构成宫调式称为“黄钟宫调”，也可以大吕、太簇等其它律来作为宫音以构成高度不同的各种五声、七声音阶。以十二律轮流作为宫音在在古时称为“旋宫”。</p>
+<p>根据相关文献及出土文物，我们可以推测古代中国是以“弦”定律。</p>
+<p>目前认为最早记载科学的律学理论的古籍为《管子·地员篇》，文中将宫商角徵羽各音与家畜的鸣声相比拟，同时从数理的角度，对各音的精密高度作了科学的论断，提出了“三分损益律”。</p>
+<p>三分损益，即先把一个振动体在长度上均分为三段；舍其三分之一余三分之二，称为“三分损一”，其发音比原音高纯五度；加其三分之一成三分之四，称为“三分益一”，其发音比原音低纯四度。而下方纯四度就是上方纯五度的转位，所以三分损益律与五度相生律属于同一体系。对“宫”三分益一得到“徵”，对“徵”三分损一得到“商”，对“商”三分益一得到“羽”，对“羽”三分损一得到“角”。另外，《管子》中将“宫”音的振动体长度设为81，以确保五音都可以用整数进行表示。</p>
+<p>《吕氏春秋·音律篇》（战国时期）中将三分损益法的应用由五律增加到十二律，其相生方法记载如下：黄钟生林钟，林钟生太簇，太簇生南吕，南吕生姑洗，姑洗生应钟，应钟生蕤宾，蕤宾生大吕，大吕生夷则，夷则生夹钟，夹钟生无射，无射生仲吕。在秦简《律书》中也有相关记载。</p>
+<p>中国数千年来广大地区一直沿用这种三分损益律，但其具体产生年代无法确定。根据近年来的出土乐器和《地员篇》中记载的内容，推测在春秋时期中期甚至是初期，即公元前7、6世纪或更早，人们已经开始使用三分损益律并对其较为熟悉。</p>
+<p>20世纪出土的春秋时期、战国时期编钟（例如“曾侯乙”编钟）对我国律学史的研究提供了珍贵资料，根据其音准可推测当时人们先在弦上定律，铸钟时再按弦校音。同时发现在当时的音乐实践中，不仅已经采用三分损益律，还使用一些纯律音程，即使用纯律大小三度辅助三分损益律进行乐器制作。</p>
+<h2 id="二探求新律时期"><a class="markdownIt-Anchor" href="#二探求新律时期"></a> （二）探求新律时期</h2>
+<p>从秦代到唐代，文化艺术的各个领域都日趋繁荣，在各族人民的交流学习与文化融合中，音乐也取得了很大发展，乐器种类不断增加。隋唐时，宫廷宴享音乐（即广义的燕乐）非常繁盛。在这一时期，律学研究也取得了新的成就，极大丰富了音阶与调式。</p>
+<p>人们为了解决三分损益法生律十一次后不能回到出发律的问题，提出了许多解决方法，可归为两类：一类是继续按照三分损益法生律，一类是调整十二律本身各律的高度。</p>
+<p>汉代时，郎中京房提出了“六十律”，记载于《后汉书·律历志》中。他按照三分损益法从“黄钟”开始生律，一直生到六十律“南事”。其中第五十四律“色育”已与“黄钟”近似。南北朝时，钱乐之沿京房的六十律继续生律，生至三百六十律，记载于《隋书·律历志》中。该律达到中国古代律学史上音律细分的最高程度。同一时期，何承天创制了一种新律，是世界上最早的一种十二平均律，也记载于《隋书·律历志》中。与现代十二平均律相比，他改变的是振动体长度的差数而不是振动体长度的比数，但其效果已十分接近现代的十二平均律。在他之后还有隋代的刘焯和五代的王朴等人尝试调整十二律本身的高度，但效果都不及何承天的新律。另外，在秦简《律书》和西汉《淮南子·天文训》中，都先用大整数计算各律比例（设黄钟振动体长为177147，称为黄钟大数），再约为小的自然数以表示各律的高度，简化了十二律间的关系，并且出现了一些纯律数据。宋代时有蔡元定提出“十八律”的理论，仍然基于三分损益法继续生律，可在一定程度上实现十二律旋相为宫。</p>
+<p>这一时期，主要使用的音阶有三种，分别为古音阶（或称雅乐音阶）、新音阶（或称清乐音阶）和清商音阶（或称燕乐音阶、俗乐音阶）。三种音阶的阶名与现代音名的一种对应关系如表6-2所示（以c为主音）。</p>
+<center>表6-2</center>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">雅乐音阶</th>
+<th style="text-align:left">宫/c</th>
+<th style="text-align:left">商/d</th>
+<th style="text-align:left">角/e</th>
+<th style="text-align:left">变徵/<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow></mrow><mtext> </mtext><mi mathvariant="normal">#</mi></msubsup><mi>f</mi></mrow><annotation encoding="application/x-tex">{_\ ^\# }f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0961079999999999em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-2.4530000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mspace mtight"><span class="mtight"> </span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">#</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span></th>
+<th style="text-align:left">徵/g</th>
+<th style="text-align:left">羽/a</th>
+<th style="text-align:left">变宫/b</th>
+<th style="text-align:left">宫/c</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">清乐音阶</td>
+<td style="text-align:left">宫/c</td>
+<td style="text-align:left">商/d</td>
+<td style="text-align:left">角/e</td>
+<td style="text-align:left">清角/f</td>
+<td style="text-align:left">徵/g</td>
+<td style="text-align:left">羽/a</td>
+<td style="text-align:left">变宫/b</td>
+<td style="text-align:left">宫/c</td>
+</tr>
+<tr>
+<td style="text-align:left">燕乐音阶</td>
+<td style="text-align:left">宫/c</td>
+<td style="text-align:left">商/d</td>
+<td style="text-align:left">角/e</td>
+<td style="text-align:left">清角/f</td>
+<td style="text-align:left">徵/g</td>
+<td style="text-align:left">羽/a</td>
+<td style="text-align:left">清羽（闰）/<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow></mrow><mtext> </mtext><mi>b</mi></msubsup><mi>b</mi></mrow><annotation encoding="application/x-tex">{_\ ^b}b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.096108em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-2.4530000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mspace mtight"><span class="mtight"> </span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span><span class="mord mathdefault">b</span></span></span></span></td>
+<td style="text-align:left">宫/c</td>
+</tr>
+</tbody>
+</table>
+<p>同样的，在这三种音阶中，可以用各音（主要是宫商角徵羽五个音）轮流作为主音，构成各种调式，例如徵调式。在这三种音阶中，五声（宫商角徵羽）和加入的二声（如变徵、变宫等）有主次之分，分别称为正声和变声。这种区别是中国五声音阶体系的特征，也是有别于欧洲七声音阶体系的主要因素。例如古音阶徵调式和新音阶宫调式，表面上其构成相同，但其本质，即正声和变声的位置却不同。</p>
+<h2 id="三十二平均律发明时期"><a class="markdownIt-Anchor" href="#三十二平均律发明时期"></a> （三）十二平均律发明时期</h2>
+<p>明代朱载堉发明了十二平均律（1581年或更早），是中国律学史上的一项巨大成就，与今日所用十二平均律完全相同。在他的著作《律历融通》中，称十二平均律为“新法密率”，并先后提出了两种求法。第一种是通过改变三分损益律中五度、四度的比值求得，第二种是通过几次开方以得到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mroot><mn>2</mn><mn>12</mn></mroot></mrow><annotation encoding="application/x-tex">\sqrt[12]{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.13278em;"></span><span class="mord sqrt"><span class="root"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7868839999999999em;"><span style="top:-2.964664em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.90722em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord">2</span></span></span><span style="top:-2.86722em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.13278em;"><span></span></span></span></span></span></span></span></span> 的具体数值而求得（在当时计算精度已达25位之多），与第五节中提到的两种方法类似。同时，他还发现了以弦定律和以管定律的不同。在以弦定律时，只需更改弦长；而以管定律时，在缩短管长度的同时还需缩小其内径。可惜的是，朱载堉提出的十二平均律在当时并没有得到重视，也未普及使用。</p>
+<h2 id="四律学研究新时期"><a class="markdownIt-Anchor" href="#四律学研究新时期"></a> （四）律学研究新时期</h2>
+<p>上世纪初，在新文化运动的影响下，除了西方键盘乐器的传入使十二平均律得到广泛应用外，一些律学研究的方法和成果也被融合吸收，开创了我国律学研究的新局面。1911年至60年代期间涌现出大量的律学研究文献书籍，研究者以刘复、王光祈、杨萌浏、吴南薰为代表。</p>
+<p>近年来，律学研究的进展可概括为四个方面：1）对律学史的研究表明，虽然三分损益律在我国占主导地位，但纯律也早在战国时期便开始得到应用；2）加强了对各民族、各地区民间音乐律制的研究；3）使用现代科技手段与科学仪器对古代律学理论进行验证；4）从数学、物理学、心理学等多个角度进行律学研究与探讨。1986年我国成立了“中国律学学会”，是我国有史以来第一个律学研究的组织，同时各大院校开始招收律学专业研究生。在这种趋势下，中国当代律学研究必将蓬勃发展。</p>
+<h1 id="七-欧洲律学简史"><a class="markdownIt-Anchor" href="#七-欧洲律学简史"></a> 七、欧洲律学简史</h1>
+<p>欧洲音乐曾经历“单声音乐”（monophony）、“复调音乐”（polyphony）和“主调音乐”（homophony）三种音乐体裁的时期。其律学发展也与音乐体裁变迁有一定联系，可以分为三个时期：</p>
+<p>1）毕达哥拉斯律时期，约公元前6世纪至公元14世纪；</p>
+<p>2）纯律时期，约公元15世纪至公元17世纪；</p>
+<p>3）十二平均律时期，约公元18世纪至20世纪。</p>
+<h2 id="一毕达哥拉斯律时期"><a class="markdownIt-Anchor" href="#一毕达哥拉斯律时期"></a> （一）毕达哥拉斯律时期</h2>
+<p>公元前6世纪，毕达哥拉斯及其门徒用数学研究当时音阶的定律法，提出了五度相生律，也称毕达哥拉斯律制（Pythagorean intonation）。该律对当时的希腊音乐和以后的欧洲音乐都有着极为深远的影响。</p>
+<p>古代希腊音乐是单声音乐，其调式构成的基础为四音列（tetrachord），即在构成纯四度的音程中加入其它两个音。两个四音列连接在一起成为七声调式，在古希腊音乐中共有七种，如表7-1所示，其中各音由五度相生律得出，除b-c、e-f为五度律小半音外，其它相邻两音音程均为大全音。</p>
+<center>表7-1</center>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">混合利第亚调式（mixolydian）</th>
+<th style="text-align:left">b-c-d-e-f-g-a-b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">利第亚调式（lydian）</td>
+<td style="text-align:left">c-d-e-f-g-a-b-c</td>
+</tr>
+<tr>
+<td style="text-align:left">弗里吉亚调式（phrygian）</td>
+<td style="text-align:left">d-e-f-g-a-b-c-d</td>
+</tr>
+<tr>
+<td style="text-align:left">多里亚调式（dorian）</td>
+<td style="text-align:left">e-f-g-a-b-c-d-e</td>
+</tr>
+<tr>
+<td style="text-align:left">下利第亚调式（hypolydian）</td>
+<td style="text-align:left">f-g-a-b-c-d-e-f</td>
+</tr>
+<tr>
+<td style="text-align:left">下弗里吉亚调式（hypophrygian）</td>
+<td style="text-align:left">g-a-b-c-d-e-f-g</td>
+</tr>
+<tr>
+<td style="text-align:left">下多里亚调式（hypodorian）</td>
+<td style="text-align:left">a-b-c-d-e-f-g-a</td>
+</tr>
+</tbody>
+</table>
+<p>毕达哥拉斯学派使用数学研究律学，被称为“理论派”，而在公元前4世纪至前2世纪还有一些研究者强调根据听觉来定律，被称为“和声派”，代表人物有阿里斯托克塞诺斯（Aristoxenus）、季季莫斯（Didymus）、普托莱米（Ptolemy）等。他们在“自然四音列”（diatonic tetrachord，即只含自然音的四音列）的基础上提出了“变化四音列”（chromatic tetrachord）和“四分音四音列”（enharmonic tetrachord），这些音列已经涉及到纯律。第四节提到的普通音差也是由“和声派”的季季莫斯发现。</p>
+<p>到了欧洲中世纪（约500~1450），教会采用“中世纪调式”（medieval mode），也称“教会调式”，有七种调式，其结构如表7-2所示。若各音采用五度相生律得到，则除e-f、b-c为五度律小半音，其余均为大半音。值得注意的是，虽然部分名称沿用古希腊调式名称，但其结构并不相同，如多里亚调式。表中的七种调式在当时仅通用前六种。</p>
+<center>表7-2</center>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">多里亚调式（dorian）</th>
+<th style="text-align:left">d-e-f-g-a-b-c-d</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">弗里吉亚调式（phrygian）</td>
+<td style="text-align:left">e-f-g-a-b-c-d-e</td>
+</tr>
+<tr>
+<td style="text-align:left">利第亚调式（lydian）</td>
+<td style="text-align:left">f-g-a-b-c-d-e-f</td>
+</tr>
+<tr>
+<td style="text-align:left">混合利第亚调式（mixolydian）</td>
+<td style="text-align:left">g-a-b-c-d-e-f-g</td>
+</tr>
+<tr>
+<td style="text-align:left">爱奥利亚调式（aeolian）</td>
+<td style="text-align:left">a-b-c-d-e-f-g-a</td>
+</tr>
+<tr>
+<td style="text-align:left">伊奥尼亚调式（ionian）</td>
+<td style="text-align:left">c-d-e-f-g-a-b-c</td>
+</tr>
+<tr>
+<td style="text-align:left">罗克里调式（locrian）</td>
+<td style="text-align:left">b-c-d-e-f-g-a-b</td>
+</tr>
+</tbody>
+</table>
+<p>欧洲一直采用单声音乐直到公元9世纪，复调音乐开始萌芽。初期的复调音乐在协和性方面与毕达哥拉斯律没有矛盾，但随着复调音乐的逐渐成熟、三度和六度音程的同时结合得到普遍应用，纯律及其相应律制逐渐出现并得以应用。</p>
+<h2 id="二纯律时期"><a class="markdownIt-Anchor" href="#二纯律时期"></a> （二）纯律时期</h2>
+<p>纯律时期与“文艺复兴”时期（约1430~1650）时间上大致相同，受文艺复兴运动的影响，音乐在内容和体裁上有了新的变化，复调音乐得到发展，并在16世纪进入繁盛时期。在14世纪初期，人们就想将古希腊“和声派”提出的一些纯律理论应用在多声部的结合中。英国的奥丁汤（Odington）于13世纪末提出纯律的三度音列，同一时期德国的弗朗科（Franko）把纯律大三度（5/4）和纯律小三度（6/5）作为协和音程。14世纪初，法国的维特里（Virty）把纯律小六度（8/5）作为协和音程，米里斯（Muris）把纯律大六度（5/3）作为协和音程。综合这些音程，就是现在的纯律大小三度和大小六度。</p>
+<p>16世纪时，意大利的札利诺（Zarlino）提出了纯律大音阶，同时专门为纯律设计了一种键盘。他首先提出了和弦构成的原理，为后来的和声学研究打下基础。札利诺不仅在纯律的研究上做出贡献，对中庸全音律和十二平均律也有一定研究。</p>
+<p>16、17世纪时，纯律在音乐实践上的应用主要为在键盘乐器上应用各种“中庸全音律”（mean-tone temperament）和在“无伴奏合唱”（acappella）上作特殊处理。</p>
+<p>中庸全音律是基于纯律和五度相生法的一种律制，根据如何划分纯律中的“普通音差”而分类，例如札利诺于1571年提出的“四分之一音差中庸全音律”，就是将五度相生时使用的纯五度缩小“普通音差的四分之一”（与使用五度相生法生成十二平均律时将纯五度缩小“最大音差的十二分之一”类似）来进行生律。根据“四分之一音差中庸全音律”的生律方法可知其大三度与纯律大三度完全一致（c生律四次即为e），其小六度也与纯律小六度相同，而其小三度、大六度与纯律对应音程仅差6音分，该律在使用时以及构成和弦时都可以产生纯律的效果。除“四分之一律”外，还有“三分之一”、“五分之一”、“七分之二”等多种中庸全音律，但一般认为“四分之一”为最佳。在十二平均律流行之前，中庸全音律在欧洲盛行达数百年。至于在无伴奏合唱中的特殊处理，则包括省去音阶的六级音或临时将六级音提高一个普通音差等。</p>
+<p>在产生中庸全音律的同时，欧洲还出现了一些“不规则律”（irregular temperament），和中庸全音律一样，多用于键盘乐器。这些律多为各种中庸全音律的变形，或是中庸全音律与其它律制的结合。</p>
+<h2 id="三十二平均律时期"><a class="markdownIt-Anchor" href="#三十二平均律时期"></a> （三）十二平均律时期</h2>
+<p>1600年前后，荷兰的斯特芬（Simon Stevin）用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mroot><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mn>2</mn></mrow><mn>12</mn></mroot></mrow><annotation encoding="application/x-tex">\sqrt[12]{1/2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.24em;vertical-align:-0.30499999999999994em;"></span><span class="mord sqrt"><span class="root"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7002200000000001em;"><span style="top:-2.878em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.935em;"><span class="svg-align" style="top:-3.2em;"><span class="pstrut" style="height:3.2em;"></span><span class="mord" style="padding-left:1em;"><span class="mord">1</span><span class="mord">/</span><span class="mord">2</span></span></span><span style="top:-2.8950000000000005em;"><span class="pstrut" style="height:3.2em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.28em;"><svg width='400em' height='1.28em' viewBox='0 0 400000 1296' preserveAspectRatio='xMinYMin slice'><path d='M263,681c0.7,0,18,39.7,52,119c34,79.3,68.167,
+158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120c340,-704.7,510.7,-1060.3,512,-1067
+c4.7,-7.3,11,-11,19,-11H40000v40H1012.3s-271.3,567,-271.3,567c-38.7,80.7,-84,
+175,-136,283c-52,108,-89.167,185.3,-111.5,232c-22.3,46.7,-33.8,70.3,-34.5,71
+c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1s-109,-253,-109,-253c-72.7,-168,-109.3,
+-252,-110,-252c-10.7,8,-22,16.7,-34,26c-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26
+s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.30499999999999994em;"><span></span></span></span></span></span></span></span></span> 的方法计算出十二平均律，但他当时并未进行发表。1636年，法国的梅尔桑（Marin Mersenne）在其著作《Harmonie Universelle》中提出了十二平均律的半音比值，虽然其结果并不准确，但被认为是欧洲第一个发表十二平均律数据的人。现代也有研究者认为，欧洲的十二平均律是由中国传入。此后在欧洲，十二平均律与中庸全音律、不规则律相抗衡，直到18世纪中期开始处于优势地位。到19世纪，十二平均律成为键盘乐器的标准调音法，得到广泛使用。</p>
+<p>在音乐实践中，当时的音乐家已深知十二平均律的便利之处，各国的作曲家、演奏家都开始使用十二平均律，同时也致力于十二平均律的开发。例如德国的巴赫（J.S.Bach），作有《十二平均律钢琴曲集》二卷，此二卷虽并非只使用了十二平均律（还使用了一些不规则律），但被认为是充分发挥十二平均律的效能，可以自由转调的典范作品。</p>
+<h2 id="四中欧律学史的异同"><a class="markdownIt-Anchor" href="#四中欧律学史的异同"></a> （四）中欧律学史的异同</h2>
+<p>纵观中欧律学史可以发现，两者都是从五度相生律体系开始，发展到十二平均律，而中间的发展过程则不尽相同。在中国，人们出于对“旋相为宫”（即“旋宫”）的追求，进行了对新律的探索；而在欧洲，则是由于多声部音乐的兴起，引起了人们对于纯律的研究和应用。</p>
+<p>有趣的是，两者有许多惊人的相似点。例如三分损益律和毕达哥拉斯律的产生时间大致相同（现代研究者认为古代的律学理论在东西方是各自独立发现的），十二平均律的产生时间大致相同；又例如两者都是在公元前便已经有了对于纯律的使用。这些相似之处表明人类听觉能力的成长和对自然音律的认识是有共性的，也说明了律学在社会发展中所占据的重要地位，同时引发我们对于中外历史发展的思考。</p>
+<h1 id="八-律制的应用"><a class="markdownIt-Anchor" href="#八-律制的应用"></a> 八、律制的应用</h1>
+<p>经过长时间的理论研究与音乐实践，人们认识到音律具有适度的变通性和灵活性，在不同的使用场景中有不同的应用方法。</p>
+<h2 id="一小提琴的音律"><a class="markdownIt-Anchor" href="#一小提琴的音律"></a> （一）小提琴的音律</h2>
+<p>小提琴是技术性很强的乐器之一，十二平均律、五度相生律和纯律都会出现在小提琴演奏上。根据对一些著名小提琴家的演奏进行测音可知，演奏中的小二度、小三度有缩小的趋势，而大二度、大三度有扩大的趋势，这与五度相生律更加契合。因此总体而言，小提琴演奏中五度相生律占上风，五度相生律对小提琴等弦乐乐器的影响也更深远。但因为现代音乐从业者大多更熟悉十二平均律，在多声部音乐中也有对纯律的需求，所以在小提琴演奏中，十二平均律与纯律也是普遍存在的。在小提琴演奏中合理运用三种律制，既要做到以准确性为基础，又需要进行一些灵活的变通。</p>
+<p>在小提琴和钢琴合奏或小提琴由钢琴伴奏时，小提琴演奏者需要适应钢琴的十二平均律。音乐创造者会尽量避免小提琴等声部和钢琴声部作完整的大音阶或小音阶的齐奏。</p>
+<p>在小提琴等弦乐器中普遍应用“吟音”（vibrato），有时也称为“颤音”，是一种由原音和另一稍高的音迅速变换，产生“波动”的演奏方式。从律学研究的角度来看，吟音波动的平均幅度为50音分（即原音和稍高音的差距），平均变换速度为每秒钟6.5次。</p>
+<h2 id="二声乐的音律"><a class="markdownIt-Anchor" href="#二声乐的音律"></a> （二）声乐的音律</h2>
+<p>声乐上音律的变通性，基本与小提琴相同。合唱训练者一般会要求合唱队员在唱大音程时尽量扩大音程，唱小音程时尽量缩小音程，倾向于五度相生律。若某一段需要纯律的效果，则临时修改为纯律。声乐用钢琴伴奏时，则也需适应钢琴的十二平均律。“吟音”在声乐上有极其广泛的应用，其平均幅度为96音分（接近半音），而平均速度与小提琴相近。</p>
+<h2 id="三钢琴的音律"><a class="markdownIt-Anchor" href="#三钢琴的音律"></a> （三）钢琴的音律</h2>
+<p>钢琴使用十二平均律调音，可应对音乐上移调、转调和变化音的需要。一般认为八度或纯五度的两音结合，产生协和音（完全协和）；大小三度、大小六度的两音结合，产生次协和音（不完全协和）；二度、七度或增减音程结合，产生不协和音。在十二平均律乐器上，因为存在不同音名的音位于乐器上同一位置的情况，即“等音”（enharmonic），造成协和音程与不协和音程的界限模糊不清的问题。例如<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow></mrow><mtext> </mtext><mi mathvariant="normal">#</mi></msubsup><mi>d</mi></mrow><annotation encoding="application/x-tex">{_\ ^\# }d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0961079999999999em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-2.4530000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mspace mtight"><span class="mtight"> </span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">#</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span><span class="mord mathdefault">d</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow></mrow><mtext> </mtext><mi>b</mi></msubsup><mi>e</mi></mrow><annotation encoding="application/x-tex">{_\ ^b}e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.096108em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-2.4530000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mspace mtight"><span class="mtight"> </span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span><span class="mord mathdefault">e</span></span></span></span>，在钢琴上位于同一个位置，音高相等，但分别与c音构成不协和的增二度与协和的小三度。要解决十二平均律的这个问题，我们不能只看一个音的音高，还要看一个音在调式、音阶与和弦中的地位，以及它与前后音如何联系，才能决定它是何音，发生何种意义。十二平均律中的等音虽然音高相同，但在做理论分析时还应将其进行区分。另外，少数的钢琴会使用中庸全音律进行调音，以演奏一些古典乐曲。</p>
+<h2 id="四管弦乐队的音律"><a class="markdownIt-Anchor" href="#四管弦乐队的音律"></a> （四）管弦乐队的音律</h2>
+<p>管弦乐队是由各类乐器集合而成的综合体，其中的小提琴等弦乐器包含常见的三种律制而偏向五度相生律；各种木管乐器在构造上都应用十二平均律，使用不同的指法和吹法可稍微改变音高以适应其它律制；铜管乐器易于发出纯律的音，但也可适应其它律制。所以尽管各类乐器都具有其中心的律制，但都能在一定限度内进行变通，以适应其它律制。管弦乐队的指挥者可以根据乐曲或乐段的性质来决定使用或偏向某种律制。例如在演奏钢琴协奏曲时使用十二平均律；对于主要使用弦乐器演奏并且曲调性强的乐曲或段落则可以使用五度相生律；对于主要使用铜管乐器演奏并且和声性突出的乐曲或段落则可以使用纯律。</p>
+<p>参考文献：</p>
+<ol>
+<li>
+<p>缪天瑞著，《律学（第三次修订版）》，人民音乐出版社，1996。</p>
+</li>
+<li>
+<p>李玫著，《东西方乐律学研究及发展历程》，中央音乐学院出版社，2006。</p>
+</li>
+<li>
+<p>戴念祖著，《中国物理学史大系·声学史》，湖南教育出版社，2001。</p>
+</li>
+<li>
+<p>李重光著，《基本乐理通用教材》，高等教育出版社，2004。</p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">David Wang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://wzw21.cn/2022/03/16/lvxue2/">http://wzw21.cn/2022/03/16/lvxue2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本文修改后出版于《音频音乐与计算机的交融——音频音乐技术2》，谢绝转载。</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%B9%90%E7%90%86/">乐理</a></div><div class="post_share"><div class="social-share" data-image="https://h2.ioliu.cn/bing/PandaDay_ZH-CN6584061291_1920x1080.jpg?imageslim" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/02/26/music-ai-tech-group/"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/ZugspitzeGipfelstation_ZH-CN6120971585_1920x1080.jpg?imageslim" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">国外部分音乐人工智能/音乐科技研究机构科研项目简介</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/11/10/lvxue1/" title="律学初探（一）"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://i.loli.net/2020/11/10/KLRmPskzJ12til5.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-10</div><div class="title">律学初探（一）</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81MTk0Ny8yODQyOA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://i.loli.net/2020/11/10/lIxwN8uY5SOpQXc.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">David Wang</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">20</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/hellwz"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">Markdown里的空格真的很严格</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD-%E4%B8%AD%E5%9B%BD%E5%BE%8B%E5%AD%A6%E7%AE%80%E5%8F%B2"><span class="toc-number">1.</span> <span class="toc-text"> 六、中国律学简史</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%B8%89%E5%88%86%E6%8D%9F%E7%9B%8A%E5%BE%8B%E5%8F%91%E7%8E%B0%E6%97%B6%E6%9C%9F"><span class="toc-number">1.1.</span> <span class="toc-text"> （一）三分损益律发现时期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E6%8E%A2%E6%B1%82%E6%96%B0%E5%BE%8B%E6%97%B6%E6%9C%9F"><span class="toc-number">1.2.</span> <span class="toc-text"> （二）探求新律时期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E5%8D%81%E4%BA%8C%E5%B9%B3%E5%9D%87%E5%BE%8B%E5%8F%91%E6%98%8E%E6%97%B6%E6%9C%9F"><span class="toc-number">1.3.</span> <span class="toc-text"> （三）十二平均律发明时期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E5%BE%8B%E5%AD%A6%E7%A0%94%E7%A9%B6%E6%96%B0%E6%97%B6%E6%9C%9F"><span class="toc-number">1.4.</span> <span class="toc-text"> （四）律学研究新时期</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83-%E6%AC%A7%E6%B4%B2%E5%BE%8B%E5%AD%A6%E7%AE%80%E5%8F%B2"><span class="toc-number">2.</span> <span class="toc-text"> 七、欧洲律学简史</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E6%AF%95%E8%BE%BE%E5%93%A5%E6%8B%89%E6%96%AF%E5%BE%8B%E6%97%B6%E6%9C%9F"><span class="toc-number">2.1.</span> <span class="toc-text"> （一）毕达哥拉斯律时期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E7%BA%AF%E5%BE%8B%E6%97%B6%E6%9C%9F"><span class="toc-number">2.2.</span> <span class="toc-text"> （二）纯律时期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E5%8D%81%E4%BA%8C%E5%B9%B3%E5%9D%87%E5%BE%8B%E6%97%B6%E6%9C%9F"><span class="toc-number">2.3.</span> <span class="toc-text"> （三）十二平均律时期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E4%B8%AD%E6%AC%A7%E5%BE%8B%E5%AD%A6%E5%8F%B2%E7%9A%84%E5%BC%82%E5%90%8C"><span class="toc-number">2.4.</span> <span class="toc-text"> （四）中欧律学史的异同</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB-%E5%BE%8B%E5%88%B6%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text"> 八、律制的应用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%B0%8F%E6%8F%90%E7%90%B4%E7%9A%84%E9%9F%B3%E5%BE%8B"><span class="toc-number">3.1.</span> <span class="toc-text"> （一）小提琴的音律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E5%A3%B0%E4%B9%90%E7%9A%84%E9%9F%B3%E5%BE%8B"><span class="toc-number">3.2.</span> <span class="toc-text"> （二）声乐的音律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E9%92%A2%E7%90%B4%E7%9A%84%E9%9F%B3%E5%BE%8B"><span class="toc-number">3.3.</span> <span class="toc-text"> （三）钢琴的音律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E7%AE%A1%E5%BC%A6%E4%B9%90%E9%98%9F%E7%9A%84%E9%9F%B3%E5%BE%8B"><span class="toc-number">3.4.</span> <span class="toc-text"> （四）管弦乐队的音律</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/03/16/lvxue2/" title="律学初探（二）"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/PandaDay_ZH-CN6584061291_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="律学初探（二）"/></a><div class="content"><a class="title" href="/2022/03/16/lvxue2/" title="律学初探（二）">律学初探（二）</a><time datetime="2022-03-16T02:37:59.000Z" title="发表于 2022-03-16 10:37:59">2022-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/26/music-ai-tech-group/" title="国外部分音乐人工智能/音乐科技研究机构科研项目简介"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/ZugspitzeGipfelstation_ZH-CN6120971585_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="国外部分音乐人工智能/音乐科技研究机构科研项目简介"/></a><div class="content"><a class="title" href="/2022/02/26/music-ai-tech-group/" title="国外部分音乐人工智能/音乐科技研究机构科研项目简介">国外部分音乐人工智能/音乐科技研究机构科研项目简介</a><time datetime="2022-02-26T06:34:01.000Z" title="发表于 2022-02-26 14:34:01">2022-02-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/20/hello-pytorch/" title="PyTorch入门程序"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/Latern2022_ZH-CN0112710917_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PyTorch入门程序"/></a><div class="content"><a class="title" href="/2022/02/20/hello-pytorch/" title="PyTorch入门程序">PyTorch入门程序</a><time datetime="2022-02-20T12:42:42.000Z" title="发表于 2022-02-20 20:42:42">2022-02-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/14/tempo-tutorial-notes/" title="音乐速度与节拍估计（二）教程阅读笔记"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/MaldivesHeart_ZH-CN0032539727_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="音乐速度与节拍估计（二）教程阅读笔记"/></a><div class="content"><a class="title" href="/2022/02/14/tempo-tutorial-notes/" title="音乐速度与节拍估计（二）教程阅读笔记">音乐速度与节拍估计（二）教程阅读笔记</a><time datetime="2022-02-14T15:44:03.000Z" title="发表于 2022-02-14 23:44:03">2022-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/06/rm-ad/" title="去除来必力（Livere）附带广告"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://h2.ioliu.cn/bing/GrahamAdelie_ZH-CN2945763969_1920x1080.jpg?imageslim" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="去除来必力（Livere）附带广告"/></a><div class="content"><a class="title" href="/2022/02/06/rm-ad/" title="去除来必力（Livere）附带广告">去除来必力（Livere）附带广告</a><time datetime="2022-02-06T05:33:46.000Z" title="发表于 2022-02-06 13:33:46">2022-02-06</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://h2.ioliu.cn/bing/PandaDay_ZH-CN6584061291_1920x1080.jpg?imageslim')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By David Wang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init();
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}
+</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
