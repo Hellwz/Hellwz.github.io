@@ -71,8 +71,8 @@
   
   <entry>
     <title>本人项目汇总（持续更新中）</title>
-    <link href="http://wzw21.cn/2022/06/23/my-project/"/>
-    <id>http://wzw21.cn/2022/06/23/my-project/</id>
+    <link href="http://wzw21.cn/2022/06/23/my-projects/"/>
+    <id>http://wzw21.cn/2022/06/23/my-projects/</id>
     <published>2022-06-23T04:24:19.000Z</published>
     <updated>2023-03-12T07:25:25.465Z</updated>
     
@@ -245,9 +245,9 @@
     <category term="操作步骤与实践" scheme="http://wzw21.cn/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4%E4%B8%8E%E5%AE%9E%E8%B7%B5/"/>
     
     
-    <category term="MIR" scheme="http://wzw21.cn/tags/MIR/"/>
-    
     <category term="Python" scheme="http://wzw21.cn/tags/Python/"/>
+    
+    <category term="MIR" scheme="http://wzw21.cn/tags/MIR/"/>
     
     <category term="Librosa" scheme="http://wzw21.cn/tags/Librosa/"/>
     
@@ -274,9 +274,9 @@
     <category term="操作步骤与实践" scheme="http://wzw21.cn/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4%E4%B8%8E%E5%AE%9E%E8%B7%B5/"/>
     
     
-    <category term="MIR" scheme="http://wzw21.cn/tags/MIR/"/>
-    
     <category term="Python" scheme="http://wzw21.cn/tags/Python/"/>
+    
+    <category term="MIR" scheme="http://wzw21.cn/tags/MIR/"/>
     
   </entry>
   
@@ -405,9 +405,9 @@
     <category term="操作步骤与实践" scheme="http://wzw21.cn/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4%E4%B8%8E%E5%AE%9E%E8%B7%B5/"/>
     
     
-    <category term="MIR" scheme="http://wzw21.cn/tags/MIR/"/>
-    
     <category term="Python" scheme="http://wzw21.cn/tags/Python/"/>
+    
+    <category term="MIR" scheme="http://wzw21.cn/tags/MIR/"/>
     
   </entry>
   
