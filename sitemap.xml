@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wzw21.cn/2022/06/23/my-project/</loc>
+    
+    <lastmod>2023-03-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wzw21.cn/2023/03/12/xlsx-operation-in-python/</loc>
     
     <lastmod>2023-03-12</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://wzw21.cn/2022/02/04/tempo-baseline/</loc>
     
     <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wzw21.cn/2022/06/23/my-project/</loc>
-    
-    <lastmod>2022-06-23</lastmod>
     
   </url>
   
