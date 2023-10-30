@@ -6,7 +6,7 @@
   <link href="http://wzw21.cn/atom.xml" rel="self"/>
   
   <link href="http://wzw21.cn/"/>
-  <updated>2023-10-22T15:21:38.454Z</updated>
+  <updated>2023-10-27T16:54:22.064Z</updated>
   <id>http://wzw21.cn/</id>
   
   <author>
@@ -17,23 +17,27 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hexo-blog-migration</title>
+    <title>Hexo博客迁移步骤</title>
     <link href="http://wzw21.cn/2023/10/22/hexo-blog-migration/"/>
     <id>http://wzw21.cn/2023/10/22/hexo-blog-migration/</id>
     <published>2023-10-22T14:31:11.000Z</published>
-    <updated>2023-10-22T15:21:38.454Z</updated>
+    <updated>2023-10-27T16:54:22.064Z</updated>
     
-    <content type="html"><![CDATA[<p>测试项目地址</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="hexo博客迁移步骤踩坑记录"><a class="markdownIt-Anchor" href="#hexo博客迁移步骤踩坑记录"></a> Hexo博客迁移步骤（踩坑记录）</h1><p>本文记录了博主在更换电脑后将旧电脑本地的Hexo博客项目迁移到新电脑，并实现在新电脑上正常发布Hexo博客至GitHub的步骤。</p><p>说明：</p><ul><li>建议优先使用前置步骤+解决方案（一）；</li><li>博主对Hexo等工具并不是很熟悉，本文仅供参考，如有错误，欢迎指正；</li><li>本地的Hexo博客项目本身也可上传至GitHub进行管理和备份，但此方法不在本文讨论范围内。</li></ul><h2 id="前置步骤"><a class="markdownIt-Anchor" href="#前置步骤"></a> 前置步骤</h2><p>无论是使用解决方案（一）还是解决方案（二），都需要先执行以下前置步骤：</p><h3 id="安装git"><a class="markdownIt-Anchor" href="#安装git"></a> 安装Git</h3><p>下载链接：<a href="https://git-scm.com/downloads">Git</a></p><p>需要完成相应的SSH配置，网上教程较多，这里省略。</p><h3 id="安装nodejs"><a class="markdownIt-Anchor" href="#安装nodejs"></a> 安装Node.js</h3><p>下载链接：<a href="https://nodejs.org/en/download">Node.js</a></p><p>所需版本可参考 <a href="https://hexo.io/zh-cn/docs/index.html#Node-js-%E7%89%88%E6%9C%AC%E9%99%90%E5%88%B6">链接</a></p><h3 id="安装hexo-cli"><a class="markdownIt-Anchor" href="#安装hexo-cli"></a> 安装hexo-cli</h3><p>安装方式：在任意位置打开 git bash，执行指令 <code>npm install hexo-cli -g</code>，其中 -g 代表全局安装，hexo-cli 是 hexo 框架的 command line interface</p><p>此处列出博主使用的版本供参考：</p><p>旧电脑：</p><ul><li>node.js</li><li>npm</li><li>hexo-cli</li><li>hexo</li></ul><p>新电脑：</p><ul><li>node.js 18.18.2</li><li>npm 9.8.1</li><li>hexo-cli 4.3.1</li><li>hexo 5.2.0</li></ul><h2 id="重要说明"><a class="markdownIt-Anchor" href="#重要说明"></a> 重要说明：</h2><p>在使用任何一种解决方案之前建议先将对应GitHub仓库中的内容（包括提交记录）进行备份，以免出现提交记录被覆盖等情况。可以使用新建分支的方法来进行备份。</p><p>若使用新电脑部署博客后遇到历史提交记录被覆盖的问题，可以在旧电脑的项目中重新运行<code>hexo d</code>，恢复记录。再尝试其它解决方案。</p><p>博主实际上先尝试了解决方案（二）中所述方法，但该方案可能会导致一些问题，所以最后采用了解决方案（一）中所述方法，并将其命名为解决方案（一）。</p><h2 id="解决方案一"><a class="markdownIt-Anchor" href="#解决方案一"></a> 解决方案（一）</h2><p>直接将原项目文件夹中所有文件复制到新文件夹中，无需进行其它操作。</p><p>在 Git Bash 中进入项目文件夹（或在项目文件夹下打开 Git Bash），确认以下命令是否可以使用：</p><p><code>hexo -v</code> 可查看hexo及其它依赖库的版本</p><p><code>hexo g</code> 生成博客内容</p><p><code>hexo s</code> 本地部署</p><p><code>hexo d</code> 部署至云端</p><p>若此时已可正常生成和部署博客，则无需关注解决方案（二）。</p><h2 id="解决方案二"><a class="markdownIt-Anchor" href="#解决方案二"></a> 解决方案（二）</h2><h3 id="复制所需文件至新电脑的项目文件夹中"><a class="markdownIt-Anchor" href="#复制所需文件至新电脑的项目文件夹中"></a> 复制所需文件至新电脑的项目文件夹中</h3><p>复制原项目文件夹下的部分文件夹和文件至新项目文件夹中：</p><table><thead><tr><th>文件/文件夹名</th><th>是否复制</th><th>说明</th></tr></thead><tbody><tr><td>.deploy_git/</td><td>可选是否复制</td><td>该文件夹下存储了一些与git部署相关的信息，若不复制，在执行 <code>hexo d</code> 时会重新生成。但博主未复制该文件夹，导致部署时原来的所有提交记录被覆盖，所以还是建议复制。</td></tr><tr><td>node_modules/</td><td>不用复制</td><td>该文件夹下存放了一些项目依赖库。</td></tr><tr><td>public/</td><td>不用复制</td><td>运行 <code>hexo g</code> 时会重新生成。</td></tr><tr><td>scaffolds/</td><td>需要复制</td><td>无</td></tr><tr><td>source/</td><td>需要复制</td><td>无</td></tr><tr><td>themes/</td><td>需要复制</td><td>无</td></tr><tr><td>.gitignore：</td><td></td><td></td></tr><tr><td>_config.yml：</td><td></td><td></td></tr><tr><td>db.json：</td><td></td><td></td></tr><tr><td>package.json：</td><td></td><td></td></tr><tr><td>package-lock.json：</td><td></td><td></td></tr></tbody></table>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;测试项目地址&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h1 id=&quot;hexo博客迁移步骤踩坑记录&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#hexo博客迁移步骤踩坑记录&quot;&gt;&lt;/a&gt; Hexo博客迁移步骤（踩坑记录）&lt;/h1&gt;
+&lt;p&gt;本文记录了博主在更换电脑后将旧电脑本地的Hexo博客项目迁移到新电脑</summary>
       
     
     
     
+    <category term="网页与前端" scheme="http://wzw21.cn/categories/%E7%BD%91%E9%A1%B5%E4%B8%8E%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="博客相关" scheme="http://wzw21.cn/tags/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/"/>
     
   </entry>
   
